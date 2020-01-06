@@ -1,0 +1,43 @@
+\hypertarget{classAsLogger}{}\section{As\+Logger Class Reference}
+\label{classAsLogger}\index{As\+Logger@{As\+Logger}}
+
+
+Inheritance diagram for As\+Logger\+:
+% FIG 0
+
+
+Collaboration diagram for As\+Logger\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAsLogger_a60984807720c9c18f8f4186d01003111}\label{classAsLogger_a60984807720c9c18f8f4186d01003111}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classAsLogger}{As\+Logger} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAsLogger_a416599debb3a39416430d0fedbf91eb4}\label{classAsLogger_a416599debb3a39416430d0fedbf91eb4}} 
+{\bfseries As\+Logger} (const std\+::string \&name=\char`\"{}root\char`\"{}, const Log\+Level level=Log\+Level\+::\+T\+R\+A\+CE, size\+\_\+t size=256)
+\item 
+\mbox{\Hypertarget{classAsLogger_ad77ad5f194443555bd5d22ed4717e2f7}\label{classAsLogger_ad77ad5f194443555bd5d22ed4717e2f7}} 
+size\+\_\+t {\bfseries get\+Buffer\+Size} () const
+\item 
+\mbox{\Hypertarget{classAsLogger_a068d3d463b741717681f424efb04b44b}\label{classAsLogger_a068d3d463b741717681f424efb04b44b}} 
+virtual void {\bfseries log} (Log\+Level level, const std\+::string \&msg) override
+\item 
+\mbox{\Hypertarget{classAsLogger_a40830ed6bb4e144afdd753ac368b0770}\label{classAsLogger_a40830ed6bb4e144afdd753ac368b0770}} 
+virtual void {\bfseries log} (Log\+Level level, const std\+::string \&msg, const \hyperlink{classLocationInfo}{Location\+Info} \&location) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAsLogger_a8a82014777371cbdfcfc5d16746d39d9}\label{classAsLogger_a8a82014777371cbdfcfc5d16746d39d9}} 
+static void {\bfseries pull\+Event} (moodycamel\+::\+Concurrent\+Queue$<$ Log\+Event\+::sptr $>$ \&buffer, std\+::map$<$ std\+::string, \hyperlink{classAppender}{Appender} $\ast$$>$ \&appenders)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logger.\+hpp\end{DoxyCompactItemize}

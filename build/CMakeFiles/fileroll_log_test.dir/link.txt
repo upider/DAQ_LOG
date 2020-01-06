@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/fileroll_log_test.dir/tests/filerolltest.cpp.o  -o ../bin/fileroll_log_test -Wl,-rpath,/home/yzz/Documents/codes/CXX/log/lib ../lib/libsylar_log.so -pthread 

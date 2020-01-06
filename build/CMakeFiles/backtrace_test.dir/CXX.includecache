@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/backtrace.hpp
+vector
+-
+string
+-
+sstream
+-
+execinfo.h
+-
+
+/home/yzz/Documents/codes/CXX/log/tests/backtrace_test.cpp
+iostream
+-
+backtrace.hpp
+/home/yzz/Documents/codes/CXX/log/tests/backtrace.hpp
+

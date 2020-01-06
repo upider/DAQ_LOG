@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/macro_log_test.dir/tests/macrotest.cpp.o  -o ../bin/macro_log_test -Wl,-rpath,/home/yzz/Documents/codes/CXX/log/lib -lpthread ../lib/libsylar_log.so 

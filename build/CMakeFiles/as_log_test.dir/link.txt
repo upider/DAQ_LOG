@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/as_log_test.dir/tests/asytest.cpp.o  -o ../bin/as_log_test -Wl,-rpath,/home/yzz/Documents/codes/CXX/log/lib -lpthread ../lib/libsylar_log.so 

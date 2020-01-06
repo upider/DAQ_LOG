@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/json_log_test.dir/tests/json_test.cpp.o  -o ../bin/json_log_test -Wl,-rpath,/home/yzz/Documents/codes/CXX/log/lib -lpthread ../lib/libsylar_log.so 

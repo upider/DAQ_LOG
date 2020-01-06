@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/zmq_log_test.dir/tests/zmqtest.cpp.o  -o ../bin/zmq_log_test -Wl,-rpath,/home/yzz/Documents/codes/CXX/log/lib -lpthread ../lib/libsylar_log.so 

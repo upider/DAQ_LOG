@@ -1,0 +1,72 @@
+\hypertarget{classFormatter}{}\section{Formatter Class Reference}
+\label{classFormatter}\index{Formatter@{Formatter}}
+
+
+日志格式化类  
+
+
+
+
+{\ttfamily \#include $<$formatter.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFormatter_1_1FormatItem}{Format\+Item}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFormatter_a3febd44eb7c072854de616b59350fe28}\label{classFormatter_a3febd44eb7c072854de616b59350fe28}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classFormatter}{Formatter} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFormatter_a4058bc0e6d52833be32d3f1fefd045e1}\label{classFormatter_a4058bc0e6d52833be32d3f1fefd045e1}} 
+void {\bfseries pattern\+Parser} ()
+\item 
+\mbox{\Hypertarget{classFormatter_a245191c34a111f770d2f3ae003312415}\label{classFormatter_a245191c34a111f770d2f3ae003312415}} 
+virtual std\+::string {\bfseries format} (Log\+Event\+::sptr event)
+\item 
+\hyperlink{classFormatter_a8127e81475ca541209942dfadab6cfa3}{Formatter} (const std\+::string \&pattern)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFormatter_a67f946643a4dc66bf9645da6ef845e6b}\label{classFormatter_a67f946643a4dc66bf9645da6ef845e6b}} 
+\hyperlink{classFormatter_a67f946643a4dc66bf9645da6ef845e6b}{Formatter} ()=default
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFormatter_a73103dd00fb85b96b58e69f0e7eab711}\label{classFormatter_a73103dd00fb85b96b58e69f0e7eab711}} 
+virtual \hyperlink{classFormatter_a73103dd00fb85b96b58e69f0e7eab711}{$\sim$\+Formatter} ()=default
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFormatter_aca36c6debb171301f2f818e06b17d380}\label{classFormatter_aca36c6debb171301f2f818e06b17d380}} 
+std\+::string {\bfseries get\+Pattern} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFormatter_a33ddb4de13796f25c347152defaed000}\label{classFormatter_a33ddb4de13796f25c347152defaed000}} 
+std\+::vector$<$ Format\+Item\+::sptr $>$ {\bfseries m\+\_\+items}
+\item 
+\mbox{\Hypertarget{classFormatter_a617dc00fec4ee01820600ccf06fec0cd}\label{classFormatter_a617dc00fec4ee01820600ccf06fec0cd}} 
+std\+::string {\bfseries m\+\_\+pattern}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+日志格式化类 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFormatter_a8127e81475ca541209942dfadab6cfa3}\label{classFormatter_a8127e81475ca541209942dfadab6cfa3}} 
+\index{Formatter@{Formatter}!Formatter@{Formatter}}
+\index{Formatter@{Formatter}!Formatter@{Formatter}}
+\subsubsection{\texorpdfstring{Formatter()}{Formatter()}}
+{\footnotesize\ttfamily Formatter\+::\+Formatter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+pattern 要使用的日志格式(字符串) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+formatter.\+hpp\end{DoxyCompactItemize}
