@@ -52,8 +52,6 @@ class LogConfigurator {
     public:
         std::string getConfFile() const;
         std::vector<log_config_t> setJsonConf(const std::string& filename);
-        std::vector<log_config_t> setXMLConf(const std::string& filename);
-        std::vector<log_config_t> setTxtConf(const std::string& filename);
     private:
         static std::vector<log_config_t> ReadJsonFromFile(const std::string& filename);
 

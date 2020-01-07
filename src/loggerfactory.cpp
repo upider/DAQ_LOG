@@ -30,17 +30,7 @@ std::list<std::string> LoggerFactory::getAllLoggerName() {
 void LoggerFactory::initFromFile(const std::string& filename) {
     m_logConfer = new LogConfigurator;
     std::vector<log_config_t> confs;
-    auto pos = filename.find_last_of(".");
-    if (pos != filename.npos) {
-        std::string type = filename.substr(pos + 1);
-        if (type == "json") {
-            confs = m_logConfer->setJsonConf(filename);
-        } else if (type == "xml") {
-            confs = m_logConfer->setXMLConf(filename);
-        } else {
-            confs = m_logConfer->setTxtConf(filename);
-        }
-    }
+    confs = m_logConfer->setJsonConf(filename);
 
     for (auto conf : confs) {
         Logger::sptr pLogger = initialize(conf.LoggerName, conf.outPutLevel);
@@ -104,17 +94,7 @@ std::list<std::string> AsLoggerFactory::getAllLoggerName() {
 void AsLoggerFactory::initFromFile(const std::string& filename) {
     m_logConfer = new LogConfigurator;
     std::vector<log_config_t> confs;
-    auto pos = filename.find_last_of(".");
-    if (pos != filename.npos) {
-        std::string type = filename.substr(pos + 1);
-        if (type == "json") {
-            confs = m_logConfer->setJsonConf(filename);
-        } else if (type == "xml") {
-            confs = m_logConfer->setXMLConf(filename);
-        } else {
-            confs = m_logConfer->setTxtConf(filename);
-        }
-    }
+    confs = m_logConfer->setJsonConf(filename);
 
     for (auto conf : confs) {
         AsLogger::sptr pAsLogger = initialize(conf.LoggerName, conf.outPutLevel, conf.bufferSize);

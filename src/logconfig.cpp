@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <tinyxml2.h>
 #include <json/json.h>
 #include "logconfig.hpp"
 
@@ -13,16 +12,6 @@ std::string LogConfigurator::getConfFile() const {
 }
 
 std::vector<log_config_t> LogConfigurator::setJsonConf(const std::string& filename) {
-    m_configFile = filename;
-    return ReadJsonFromFile(filename);
-}
-
-std::vector<log_config_t> LogConfigurator::setXMLConf(const std::string& filename) {
-    m_configFile = filename;
-    return ReadJsonFromFile(filename);
-}
-
-std::vector<log_config_t> LogConfigurator::setTxtConf(const std::string& filename) {
     m_configFile = filename;
     return ReadJsonFromFile(filename);
 }

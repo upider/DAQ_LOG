@@ -1,0 +1,28 @@
+{
+	"Loggers":[{
+		"name":"ps",
+		"singleFileName":"/home/yzz/Desktop/log",
+		"appenders":["SingleFileAppender","StdoutAppender"],
+		"rollFilePath":"",
+		"filePrefix":"",
+		"fileSubfix":"",
+		"inetAddr":"",
+		"outPutLevel":0,
+		"port":0,
+		"rollFileSize":10,
+		"bufferSize":10
+	},
+	{
+		"name":"ros",
+		"singleFileName":"/home/yzz/Desktop/log1",
+		"appenders":["SingleFileAppender","StdoutAppender"],
+		"rollFilePath":"",
+		"filePrefix":"",
+		"fileSubfix":"",
+		"inetAddr":"",
+		"outPutLevel":0,
+		"port":0,
+		"rollFileSize":10,
+		"bufferSize":1024
+	}]
+}

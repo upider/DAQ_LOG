@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.10)
 set(CMAKE_TOOLCHAIN_FILE /home/yzz/Softerware/vcpkg/scripts/buildsystems/vcpkg.cmake)
 project(DAQ_LOG)
 aux_source_directory(src LOG_SRC)
@@ -14,35 +14,35 @@ add_library(sylar_log SHARED ${LOG_SRC})
 target_include_directories(
 	sylar_log  PUBLIC
 	include
-	${Boost_INCLUDE_DIRS})
+	${Boost_INCLUDE_DIRS}
+	)
 
 target_link_libraries(
 	sylar_log PRIVATE
 	czmq-static
 	jsoncpp_lib
-	tinyxml2::tinyxml2
 	CURL::libcurl
 	unofficial::concurrentqueue::concurrentqueue
 	${Boost_LIBRARIES}
 	)
 
-add_executable(backtrace_test ./tests/backtrace_test.cpp)
+add_executable(backtrace_test ./example/backtrace_test.cpp)
 target_link_libraries(backtrace_test sylar_log)
-add_executable(http_log_test ./tests/httptest.cpp)
+add_executable(http_log_test ./example/httptest.cpp)
 target_link_libraries(http_log_test pthread sylar_log)
-add_executable(macro_log_test ./tests/macrotest.cpp)
+add_executable(macro_log_test ./example/macrotest.cpp)
 target_link_libraries(macro_log_test pthread sylar_log)
-add_executable(json_log_test ./tests/json_test.cpp)
+add_executable(json_log_test ./example/json_test.cpp)
 target_link_libraries(json_log_test pthread sylar_log)
-add_executable(as_log_test ./tests/asytest.cpp)
+add_executable(as_log_test ./example/asytest.cpp)
 target_link_libraries(as_log_test pthread sylar_log)
-add_executable(zmq_log_test ./tests/zmqtest.cpp)
+add_executable(zmq_log_test ./example/zmqtest.cpp)
 target_link_libraries(zmq_log_test pthread sylar_log)
-add_executable(std_log_test ./tests/stdtest.cpp)
+add_executable(std_log_test ./example/stdtest.cpp)
 target_link_libraries(std_log_test sylar_log -pthread)
-add_executable(fileroll_log_test ./tests/filerolltest.cpp)
+add_executable(fileroll_log_test ./example/filerolltest.cpp)
 target_link_libraries(fileroll_log_test sylar_log -pthread)
-add_executable(conf_log_test ./tests/config_test.cpp)
+add_executable(conf_log_test ./example/config_test.cpp)
 target_link_libraries(conf_log_test sylar_log -pthread)
 
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
