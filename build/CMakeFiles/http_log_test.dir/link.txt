@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/http_log_test.dir/tests/httptest.cpp.o  -o ../bin/http_log_test -Wl,-rpath,/home/yzz/Documents/codes/CXX/log/lib -lpthread ../lib/libsylar_log.so 

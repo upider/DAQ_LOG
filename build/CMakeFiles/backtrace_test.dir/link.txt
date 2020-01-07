@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/backtrace_test.dir/tests/backtrace_test.cpp.o  -o ../bin/backtrace_test -Wl,-rpath,/home/yzz/Documents/codes/CXX/log/lib ../lib/libsylar_log.so 
