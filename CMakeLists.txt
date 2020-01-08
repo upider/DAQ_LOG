@@ -6,7 +6,7 @@ aux_source_directory(src LOG_SRC)
 find_package(CURL CONFIG REQUIRED)
 find_package(czmq CONFIG REQUIRED)
 find_package(jsoncpp CONFIG REQUIRED)
-find_package(Boost REQUIRED COMPONENTS fiber thread)
+find_package(Boost REQUIRED COMPONENTS fiber thread filesystem)
 find_package(unofficial-concurrentqueue CONFIG REQUIRED)
 
 add_library(sylar_log SHARED ${LOG_SRC})

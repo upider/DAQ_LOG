@@ -8,7 +8,8 @@ int main() {
 
     logger->addAppender(new StdoutAppender);
     while (true) {
-        logger->info("StdoutTestfsfsf", LOCATIONINFO);
+        //logger->info("StdoutTestfsfsf", LOCATIONINFO);
+        logger->info("StdoutTestfsfsf");
     }
 
     return 0;

@@ -3,6 +3,7 @@
 #include <chrono>
 #include <stdexcept>
 #include <sys/stat.h>
+#include <boost/filesystem.hpp>
 #include <json/json.h>
 #include "appender.hpp"
 
@@ -41,44 +42,48 @@ void StdoutAppender::append(LogEvent::sptr event) {
 RollFileAppender::RollFileAppender(const std::string & path, u_int32_t size,
                                    const std::string & prefix, const std::string & subfix)
     : m_path(path),
-      m_fileMaxSize(size) {
+      m_maxFileSize(size),
+      m_prefix(prefix),
+      m_subfix(subfix) {
     std::stringstream ss;
     ss << "::FileRollAppender::" << prefix << "-" << subfix;
     m_id += ss.str();
-    if(m_fileMaxSize == 0) {
-        std::cout << " file size is invaild!" << std::endl;
+    if(m_maxFileSize == 0) {
+        std::cout << "logger max file size is invaild!" << std::endl;
         return;
+    }
+    if(!boost::filesystem::is_directory(m_path)) {
+        boost::filesystem::create_directories(m_path);
     }
     createNewFile();
     reopen();
 }
 
 RollFileAppender::~RollFileAppender() {
-    std::cout << "~RollFileAppender()"  << std::endl;
     closeFile();
 }
 
+
 void RollFileAppender::createNewFile() {
     time_t tt = time(0);
-    struct tm * time = gmtime(&tt);
+    struct tm * time = localtime(&tt);
     char buffer[128];
     std::strftime(buffer, 128, "%Y%m%d%H%M%S", time);
-    m_fileName = m_prefix + buffer + m_subfix;
+    m_currentFileName = m_path + "/" + m_prefix + buffer + m_subfix;
 }
 
 bool RollFileAppender::closeFile() {
-    if (m_fileStream.is_open())
+    if (m_fileStream.is_open()) {
         m_fileStream.close();
+    }
     return !m_fileStream.is_open();
 }
 
 void RollFileAppender::append(LogEvent::sptr event) {
-    struct stat statbuf;
-    stat(m_fileName.c_str(), &statbuf);
     std::lock_guard<std::mutex> lock_guard(m_appendMutex);
-    if ((double)statbuf.st_size / (1024 * 1024) <= 8) {
+    if (boost::filesystem::file_size(m_currentFileName) < m_maxFileSize * 1024 * 1024) {
         m_fileStream << m_formatter->format(event);
-        m_fileSize = statbuf.st_size;
+        m_fileStream.flush();
     } else {
         closeFile();
         createNewFile();
@@ -90,7 +95,7 @@ void RollFileAppender::append(LogEvent::sptr event) {
 bool RollFileAppender::reopen() {
     if (m_fileStream.is_open())
         m_fileStream.close();
-    m_fileStream.open(m_fileName);
+    m_fileStream.open(m_currentFileName);
 
     return m_fileStream.is_open();
 }

@@ -14,7 +14,7 @@ void Logger::log(LogLevel level, const std::string& msg, const LocationInfo& loc
     if (level >= m_conf.outPutLevel) {
         auto self(shared_from_this());
         LogEvent::sptr event(new LogEvent(self->getName(), level, msg, location));
-        for(auto it = m_appendersMap.begin() ; it != m_appendersMap.end(); ++it) {
+        for(auto it = m_appendersMap.begin(); it != m_appendersMap.end(); ++it) {
             it->second->append(event);
         }
     }

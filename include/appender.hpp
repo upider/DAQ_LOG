@@ -87,6 +87,7 @@ class RollFileAppender : public Appender {
         /// \param 日志事件
         virtual void append(LogEvent::sptr event) override;
 
+        /// \brief createNewFile 创建新的log文件名，并不打开文件
         void createNewFile();
 
         //重新打开返回true
@@ -114,11 +115,10 @@ class RollFileAppender : public Appender {
 
     private:
         std::string m_path;
-        size_t m_fileMaxSize;       ///文件最大大小MB
+        size_t m_maxFileSize;       ///文件最大大小MB
         std::string m_prefix;
         std::string m_subfix;
-        std::string m_fileName;
-        u_int32_t m_fileSize = 0;
+        std::string m_currentFileName;
         std::ofstream m_fileStream;
 };
 
@@ -132,6 +132,9 @@ class SingleFileAppender : public Appender {
         SingleFileAppender(const std::string& name);
         ~SingleFileAppender();
 
+        /// \brief 日志输出函数
+        ///
+        /// \param 日志事件
         virtual void append(LogEvent::sptr event) override;
         void setFileName(const std::string& filename) {
             m_fileName = filename;
@@ -145,23 +148,39 @@ class SingleFileAppender : public Appender {
 
 //ZMQ发送log,"inetAddr:port"
 /*******************************************************************************/
+/// \brief 使用管道模式发送log的ZMQAppender
 class ZMQAppender : public Appender {
     public:
         ZMQAppender() {}
+        /// \brief ZMQAppender 构造函数
+        ///
+        /// \param host 主机地址
+        /// \param port 端口号
         ZMQAppender(const std::string& host, const std::string& port);
         ZMQAppender(const std::string& host, size_t port);
         ZMQAppender(const std::string& endpoint);
         ~ZMQAppender();
 
+        /// \brief 日志输出函数
+        ///
+        /// \param 日志事件
         virtual void append(LogEvent::sptr event) override;
         void setEndpoint(const std::string& endpoint) {
             m_endpoint = endpoint;
         }
+        /// \brief setEndpoint 设置接收端地址
+        ///
+        /// \param host 主机地址
+        /// \param port 端口号
         void setEndpoint(const std::string& host, size_t port) {
             m_host = host;
             m_port = std::to_string(port);
             m_endpoint = "tcp://" + m_host + ":" + m_port;
         }
+        /// \brief setEndpoint 设置接收端地址
+        ///
+        /// \param host 主机地址
+        /// \param port 端口号
         void setEndpoint(const std::string& host, const std::string& port) {
             m_host = host;
             m_port = port;
@@ -180,10 +199,21 @@ class ZMQAppender : public Appender {
 /*******************************************************************************/
 class HTTPAppender : public Appender {
     public:
+        /// \brief HTTPAppender HTTP发送JSON格式的LogEvent
+        ///
+        /// \param host 主机地址
+        /// \param port 端口号
         HTTPAppender(const std::string& host, const std::string& port);
+        /// \brief HTTPAppender HTTP发送JSON格式的LogEvent
+        ///
+        /// \param host 主机地址
+        /// \param port 端口号
         HTTPAppender(const std::string& host, size_t port);
         ~HTTPAppender();
 
+        /// \brief 日志输出函数
+        ///
+        /// \param 日志事件
         virtual void append(LogEvent::sptr event) override;
 
     private:
