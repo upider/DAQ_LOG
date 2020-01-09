@@ -8,6 +8,11 @@
 
 namespace DAQ {
 
+/// \brief Backtrace 获取函数栈信息
+///
+/// \param bt 保存栈的数组
+/// \param size 栈层数
+/// \param skip 跳过栈层数
 void Backtrace(std::vector<std::string>& bt, int size, int skip) {
     void** array = (void**)malloc(sizeof(void*)*size);
     size_t s = ::backtrace(array, size);
@@ -25,6 +30,14 @@ void Backtrace(std::vector<std::string>& bt, int size, int skip) {
     free(array);
 }
 
+/// \brief BacktraceToString 把栈信息转化为string
+///
+/// \param bt 保存栈的数组
+/// \param size 栈层数
+/// \param skip 跳过栈层数
+/// \param prefix 前缀
+///
+/// \return 栈信息string
 std::string BacktraceToString(int size, int skip, const std::string& prefix) {
     std::vector<std::string> bt;
     Backtrace(bt, size, skip);

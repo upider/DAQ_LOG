@@ -7,59 +7,66 @@
 
 namespace DAQ {
 
+/// @brief 配置log的结构体，包含所有能够配置的选项
 typedef struct LogConfigStruct {
     public:
-        LogConfigStruct() {}
+        LogConfigStruct() = default;
         LogConfigStruct(std::string name, LogLevel level)
-            : LoggerName(name), outPutLevel(level) {}
+            : loggerName(name),
+              outputLevel(level) {}
         LogConfigStruct(std::string name, LogLevel level, size_t size)
-            : LoggerName(name), outPutLevel(level), bufferSize(size) {}
+            : loggerName(name),
+              asyncBufferSize(size),
+              outputLevel(level) {}
 
     public:
         void operator=(const LogConfigStruct& rth) {
-            this->LoggerName = rth.LoggerName;
-            this->rowFormatter = rth.rowFormatter;
+            this->loggerName = rth.loggerName;
+            this->rawFormatter = rth.rawFormatter;
             this->jsonFormatter = rth.jsonFormatter;
             this->appenders = rth.appenders;
             this->singleFileName = rth.singleFileName;
             this->rollFilePath = rth.rollFilePath;
-            this->filePrefix = rth.filePrefix;
-            this->fileSubfix = rth.fileSubfix;
+            this->rollFilePrefix = rth.rollFilePrefix;
+            this->rollFileSubfix = rth.rollFileSubfix;
             this->inetAddr = rth.inetAddr;
-            this->outPutLevel = rth.outPutLevel;
             this->port = rth.port;
             this->rollFileSize = rth.rollFileSize;
-            this->bufferSize = rth.bufferSize;
+            this->asyncBufferSize  = rth.asyncBufferSize;
+            this->outputLevel = rth.outputLevel;
         }
     public:
-        std::string LoggerName = "root";
-        std::string rowFormatter = "[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n";
+        std::string loggerName = "root";
+        std::string rawFormatter = "[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n";
         std::string jsonFormatter = "";
         std::vector<std::string> appenders = {};
         std::string singleFileName = "";
         std::string rollFilePath = "";
-        std::string filePrefix = "";
-        std::string fileSubfix = "";
-        std::string inetAddr = "";
-        LogLevel outPutLevel = LogLevel::TRACE;
-        size_t bufferSize = 0;
-        size_t port = 0;
+        std::string rollFilePrefix = "";
+        std::string rollFileSubfix = "";
         size_t rollFileSize = 0;
+        std::string inetAddr = "";
+        size_t port = 0;
+        size_t asyncBufferSize = 0;
+        LogLevel outputLevel = LogLevel::TRACE;
 } log_config_t;
 
 
+/// @brief 能够配置log的类
 class LogConfigurator {
     private:
         std::string m_configFile;
     public:
-        std::string getConfFile() const;
-        std::vector<log_config_t> setJsonConf(const std::string& filename);
+        std::string getConfFileName() const;
+        std::vector<log_config_t> getConf(const std::string& filename);
     private:
-        static std::vector<log_config_t> ReadJsonFromFile(const std::string& filename);
+        static std::vector<log_config_t> readJsonFromFile(const std::string& filename);
+        static std::vector<log_config_t> readXMLFromFile(const std::string& filename);
+        static std::vector<log_config_t> readTxtFromFile(const std::string& filename);
 
     public:
-        LogConfigurator();
-        virtual ~LogConfigurator();
+        LogConfigurator() = default;
+        virtual ~LogConfigurator() = default;
 };
 
 }

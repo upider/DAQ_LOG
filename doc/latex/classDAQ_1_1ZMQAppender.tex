@@ -1,0 +1,124 @@
+\hypertarget{classDAQ_1_1ZMQAppender}{}\section{D\+AQ\+:\+:Z\+M\+Q\+Appender Class Reference}
+\label{classDAQ_1_1ZMQAppender}\index{D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}}
+
+
+使用管道模式发送log的\+Z\+M\+Q\+Appender  
+
+
+
+
+{\ttfamily \#include $<$appender.\+hpp$>$}
+
+
+
+Inheritance diagram for D\+AQ\+:\+:Z\+M\+Q\+Appender\+:
+% FIG 0
+
+
+Collaboration diagram for D\+AQ\+:\+:Z\+M\+Q\+Appender\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDAQ_1_1ZMQAppender_ab5078b0b11a62feda72cda2259524517}{Z\+M\+Q\+Appender} (const std\+::string \&host, const std\+::string \&port)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDAQ_1_1ZMQAppender}{Z\+M\+Q\+Appender} 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDAQ_1_1ZMQAppender_a8305a007ad1587beed951bff9166372f}\label{classDAQ_1_1ZMQAppender_a8305a007ad1587beed951bff9166372f}} 
+{\bfseries Z\+M\+Q\+Appender} (const std\+::string \&host, size\+\_\+t port)
+\item 
+\mbox{\Hypertarget{classDAQ_1_1ZMQAppender_a3a2e50c929c78188585bf0640b91a3f6}\label{classDAQ_1_1ZMQAppender_a3a2e50c929c78188585bf0640b91a3f6}} 
+{\bfseries Z\+M\+Q\+Appender} (const std\+::string \&endpoint)
+\item 
+virtual void \hyperlink{classDAQ_1_1ZMQAppender_a8dc33b1b2768e9e97438607a52b136d4}{append} (Log\+Event\+::sptr event) override
+\begin{DoxyCompactList}\small\item\em 日志输出函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDAQ_1_1ZMQAppender_a93ae54d73236fd2a43894760cf5f1710}\label{classDAQ_1_1ZMQAppender_a93ae54d73236fd2a43894760cf5f1710}} 
+void {\bfseries set\+Endpoint} (const std\+::string \&endpoint)
+\item 
+void \hyperlink{classDAQ_1_1ZMQAppender_a3e872d262ba9a6e9c17c779f73a1c3a3}{set\+Endpoint} (const std\+::string \&host, size\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em set\+Endpoint 设置接收端地址 \end{DoxyCompactList}\item 
+void \hyperlink{classDAQ_1_1ZMQAppender_a3eba37ec932d66030bbc1a6f5c751005}{set\+Endpoint} (const std\+::string \&host, const std\+::string \&port)
+\begin{DoxyCompactList}\small\item\em set\+Endpoint 设置接收端地址 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+使用管道模式发送log的\+Z\+M\+Q\+Appender 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDAQ_1_1ZMQAppender_ab5078b0b11a62feda72cda2259524517}\label{classDAQ_1_1ZMQAppender_ab5078b0b11a62feda72cda2259524517}} 
+\index{D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}!Z\+M\+Q\+Appender@{Z\+M\+Q\+Appender}}
+\index{Z\+M\+Q\+Appender@{Z\+M\+Q\+Appender}!D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}}
+\subsubsection{\texorpdfstring{Z\+M\+Q\+Appender()}{ZMQAppender()}}
+{\footnotesize\ttfamily D\+A\+Q\+::\+Z\+M\+Q\+Appender\+::\+Z\+M\+Q\+Appender (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{const std\+::string \&}]{port }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classDAQ_1_1ZMQAppender}{Z\+M\+Q\+Appender} 构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & 主机地址 \\
+\hline
+{\em port} & 端口号 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDAQ_1_1ZMQAppender_a8dc33b1b2768e9e97438607a52b136d4}\label{classDAQ_1_1ZMQAppender_a8dc33b1b2768e9e97438607a52b136d4}} 
+\index{D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}!append@{append}}
+\index{append@{append}!D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void D\+A\+Q\+::\+Z\+M\+Q\+Appender\+::append (\begin{DoxyParamCaption}\item[{Log\+Event\+::sptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+日志输出函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 日志事件} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDAQ_1_1Appender_a49ebbcec4d879ba461080479fa1085aa}{D\+A\+Q\+::\+Appender}.
+
+\mbox{\Hypertarget{classDAQ_1_1ZMQAppender_a3e872d262ba9a6e9c17c779f73a1c3a3}\label{classDAQ_1_1ZMQAppender_a3e872d262ba9a6e9c17c779f73a1c3a3}} 
+\index{D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}!set\+Endpoint@{set\+Endpoint}}
+\index{set\+Endpoint@{set\+Endpoint}!D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}}
+\subsubsection{\texorpdfstring{set\+Endpoint()}{setEndpoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void D\+A\+Q\+::\+Z\+M\+Q\+Appender\+::set\+Endpoint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{size\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Endpoint 设置接收端地址 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & 主机地址 \\
+\hline
+{\em port} & 端口号 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDAQ_1_1ZMQAppender_a3eba37ec932d66030bbc1a6f5c751005}\label{classDAQ_1_1ZMQAppender_a3eba37ec932d66030bbc1a6f5c751005}} 
+\index{D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}!set\+Endpoint@{set\+Endpoint}}
+\index{set\+Endpoint@{set\+Endpoint}!D\+A\+Q\+::\+Z\+M\+Q\+Appender@{D\+A\+Q\+::\+Z\+M\+Q\+Appender}}
+\subsubsection{\texorpdfstring{set\+Endpoint()}{setEndpoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void D\+A\+Q\+::\+Z\+M\+Q\+Appender\+::set\+Endpoint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{const std\+::string \&}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Endpoint 设置接收端地址 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & 主机地址 \\
+\hline
+{\em port} & 端口号 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+appender.\+hpp\end{DoxyCompactItemize}

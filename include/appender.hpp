@@ -15,15 +15,15 @@
 
 namespace DAQ {
 
-/// \输出器的虚基类
+/// 输出器的虚基类
 class Appender {
     public:
         using sptr = std::shared_ptr<Appender>;
-        /// \brief 默认构造函数
+        /// \brief Appender 默认构造函数
         Appender() = default;
         /// \brief 构造函数
         ///
-        /// \param formater对象
+        /// \param formatter formater对象
         Appender(const Formatter formatter);
         /// \brief 构造函数
         ///

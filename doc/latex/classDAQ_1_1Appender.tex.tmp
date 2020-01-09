@@ -1,0 +1,158 @@
+\hypertarget{classDAQ_1_1Appender}{}\section{D\+AQ\+:\+:Appender Class Reference}
+\label{classDAQ_1_1Appender}\index{D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}}
+
+
+输出器的虚基类  
+
+
+
+
+{\ttfamily \#include $<$appender.\+hpp$>$}
+
+
+
+Inheritance diagram for D\+AQ\+:\+:Appender\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Appender_a209795e48e78f3ccec42f88771ada74f}\label{classDAQ_1_1Appender_a209795e48e78f3ccec42f88771ada74f}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classDAQ_1_1Appender}{Appender} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Appender_a34ee6c76db409f3f6368d61dcd19dac6}\label{classDAQ_1_1Appender_a34ee6c76db409f3f6368d61dcd19dac6}} 
+\hyperlink{classDAQ_1_1Appender_a34ee6c76db409f3f6368d61dcd19dac6}{Appender} ()=default
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDAQ_1_1Appender}{Appender} 默认构造函数 \end{DoxyCompactList}\item 
+\hyperlink{classDAQ_1_1Appender_a3711b48f74b2d2146eb67c052398d118}{Appender} (const \hyperlink{classDAQ_1_1Formatter}{Formatter} formatter)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\hyperlink{classDAQ_1_1Appender_a464573d7906d91c4969fc90764d07cb9}{Appender} (const std\+::string \&formatter)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{classDAQ_1_1Appender_a54b9cecd0811e8fd9090a6491c8b0582}{get\+Id} () const
+\begin{DoxyCompactList}\small\item\em get\+Id 得到\+Appender的id 避免相同\+Log\+Appender加入到\+Logger，使得重复输出 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDAQ_1_1Appender_a49ebbcec4d879ba461080479fa1085aa}{append} (Log\+Event\+::sptr event)
+\begin{DoxyCompactList}\small\item\em 日志输出函数 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDAQ_1_1Appender_a3f8a1329c7c35c96c9b073b4a54e22b3}{set\+Formatter} (Formatter\+::sptr formatter)
+\begin{DoxyCompactList}\small\item\em 设置输出格式 \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classDAQ_1_1Appender_a37a4e7012accc17644bf9ac4b105b78d}{has\+Formatter} ()
+\begin{DoxyCompactList}\small\item\em 判断是否已经有了\+Formatter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDAQ_1_1Appender_aedd2a807ae2ef4a005df4c358ab7d57e}\label{classDAQ_1_1Appender_aedd2a807ae2ef4a005df4c358ab7d57e}} 
+virtual \hyperlink{classDAQ_1_1Appender_aedd2a807ae2ef4a005df4c358ab7d57e}{$\sim$\+Appender} ()=default
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Appender_ad670cd57ea4693b856a0d0071331294f}\label{classDAQ_1_1Appender_ad670cd57ea4693b856a0d0071331294f}} 
+std\+::string {\bfseries m\+\_\+id} = \char`\"{}Appender\char`\"{}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Appender_a35aed18cb1cbb04cee3ed4868b9e6624}\label{classDAQ_1_1Appender_a35aed18cb1cbb04cee3ed4868b9e6624}} 
+Formatter\+::sptr \hyperlink{classDAQ_1_1Appender_a35aed18cb1cbb04cee3ed4868b9e6624}{m\+\_\+formatter}
+\begin{DoxyCompactList}\small\item\em 避免相同\+Log\+Appender加入到\+Logger，使得重复输出 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDAQ_1_1Appender_ae118c5846591a912ceed6abb84a5b64b}\label{classDAQ_1_1Appender_ae118c5846591a912ceed6abb84a5b64b}} 
+std\+::mutex {\bfseries m\+\_\+append\+Mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+输出器的虚基类 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDAQ_1_1Appender_a3711b48f74b2d2146eb67c052398d118}\label{classDAQ_1_1Appender_a3711b48f74b2d2146eb67c052398d118}} 
+\index{D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}!Appender@{Appender}}
+\index{Appender@{Appender}!D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}}
+\subsubsection{\texorpdfstring{Appender()}{Appender()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily D\+A\+Q\+::\+Appender\+::\+Appender (\begin{DoxyParamCaption}\item[{const \hyperlink{classDAQ_1_1Formatter}{Formatter}}]{formatter }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & formater对象 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDAQ_1_1Appender_a464573d7906d91c4969fc90764d07cb9}\label{classDAQ_1_1Appender_a464573d7906d91c4969fc90764d07cb9}} 
+\index{D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}!Appender@{Appender}}
+\index{Appender@{Appender}!D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}}
+\subsubsection{\texorpdfstring{Appender()}{Appender()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily D\+A\+Q\+::\+Appender\+::\+Appender (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{formatter }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formater字符串} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDAQ_1_1Appender_a49ebbcec4d879ba461080479fa1085aa}\label{classDAQ_1_1Appender_a49ebbcec4d879ba461080479fa1085aa}} 
+\index{D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}!append@{append}}
+\index{append@{append}!D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void D\+A\+Q\+::\+Appender\+::append (\begin{DoxyParamCaption}\item[{Log\+Event\+::sptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+日志输出函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 日志事件} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDAQ_1_1HTTPAppender_a2648d6d4328aea4d6d19ca05677fda1c}{D\+A\+Q\+::\+H\+T\+T\+P\+Appender}, \hyperlink{classDAQ_1_1ZMQAppender_a8dc33b1b2768e9e97438607a52b136d4}{D\+A\+Q\+::\+Z\+M\+Q\+Appender}, \hyperlink{classDAQ_1_1SingleFileAppender_ae006b18883d7b57302ef8335e095a0e3}{D\+A\+Q\+::\+Single\+File\+Appender}, \hyperlink{classDAQ_1_1RollFileAppender_a81223817b0bc2a365a8fa70271766bc2}{D\+A\+Q\+::\+Roll\+File\+Appender}, and \hyperlink{classDAQ_1_1StdoutAppender_a012a068aa3532d7f1b3459ff11107231}{D\+A\+Q\+::\+Stdout\+Appender}.
+
+\mbox{\Hypertarget{classDAQ_1_1Appender_a54b9cecd0811e8fd9090a6491c8b0582}\label{classDAQ_1_1Appender_a54b9cecd0811e8fd9090a6491c8b0582}} 
+\index{D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily const std\+::string D\+A\+Q\+::\+Appender\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Id 得到\+Appender的id 避免相同\+Log\+Appender加入到\+Logger，使得重复输出 
+
+\begin{DoxyReturn}{Returns}
+id (string) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDAQ_1_1Appender_a37a4e7012accc17644bf9ac4b105b78d}\label{classDAQ_1_1Appender_a37a4e7012accc17644bf9ac4b105b78d}} 
+\index{D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}!has\+Formatter@{has\+Formatter}}
+\index{has\+Formatter@{has\+Formatter}!D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}}
+\subsubsection{\texorpdfstring{has\+Formatter()}{hasFormatter()}}
+{\footnotesize\ttfamily virtual bool D\+A\+Q\+::\+Appender\+::has\+Formatter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+判断是否已经有了\+Formatter 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDAQ_1_1Appender_a3f8a1329c7c35c96c9b073b4a54e22b3}\label{classDAQ_1_1Appender_a3f8a1329c7c35c96c9b073b4a54e22b3}} 
+\index{D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}!set\+Formatter@{set\+Formatter}}
+\index{set\+Formatter@{set\+Formatter}!D\+A\+Q\+::\+Appender@{D\+A\+Q\+::\+Appender}}
+\subsubsection{\texorpdfstring{set\+Formatter()}{setFormatter()}}
+{\footnotesize\ttfamily virtual void D\+A\+Q\+::\+Appender\+::set\+Formatter (\begin{DoxyParamCaption}\item[{Formatter\+::sptr}]{formatter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+设置输出格式 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Formatter智能指针} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+appender.\+hpp\end{DoxyCompactItemize}

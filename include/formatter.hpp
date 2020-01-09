@@ -14,7 +14,13 @@ namespace DAQ {
 class Formatter {
     public:
         using sptr = std::shared_ptr<Formatter>;
+        /// \brief patternParser 初始化时解析格式
         void patternParser();
+        /// \brief format 格式化日志事件
+        ///
+        /// \param event 日志事件
+        ///
+        /// \return 日志事件字符串
         virtual std::string format(LogEvent::sptr event);
 
     public:
@@ -39,7 +45,7 @@ class Formatter {
         }
 
     public:
-        //pattern解析
+        /// @brief 格式化项
         class FormatItem {
             public:
                 using sptr = std::shared_ptr<FormatItem>;

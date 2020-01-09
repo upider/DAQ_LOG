@@ -6,7 +6,7 @@
 2. 支持异步
 3. 支持将日志发送HTTP、ZMQ
 4. 支持滚动文件日志
-5. 风格接近log4j，借鉴了sylar(https://github.com/sylar-yin/sylar)
+5. 风格接近log4j，借鉴了sylar(https://github.com/sylar-yin/sylar)和log4j
 6. 支持Linux平台(ubuntu 18.04)
 
 ## 使用建议
@@ -23,6 +23,7 @@
 	3. boost.fiber filesystem
 	4. jsoncpp
 	5. curl
+	6. tinyxml2
 
 ## 自定义日志样式
 	比如：%d{yyy MMM dd HH:mm:ss , SSS}
@@ -45,6 +46,13 @@
 
 	json日志样式适合配合HTTPAppender发送给Flume
 
+## Appender——日志输出器
+
+	1. StdoutAppender：输出到标准输出
+	2. ZMQAppender：zmq管道模式输出到服务器端
+	3. SingleFileAppender：单文件日志输出
+	4. RollFileAppender：滚动文件日志输出
+	5. HTTPAppender：HTTP发送日志到服务器端,适合发送到Flume
 
 ## 不提供TCP、UDP和syslog的Appender
 

@@ -32,11 +32,11 @@ std::list<std::string> LoggerFactory::getAllLoggerName() {
 void LoggerFactory::initFromFile(const std::string& filename) {
     m_logConfer = new LogConfigurator;
     std::vector<log_config_t> confs;
-    confs = m_logConfer->setJsonConf(filename);
+    confs = m_logConfer->getConf(filename);
 
     for (auto conf : confs) {
-        Logger::sptr pLogger = initialize(conf.LoggerName, conf.outPutLevel);
-        pLogger->setFormatter(conf.rowFormatter);
+        Logger::sptr pLogger = initialize(conf.loggerName, conf.outputLevel);
+        pLogger->setFormatter(conf.rawFormatter);
         pLogger->setJsonFormatter(conf.jsonFormatter);
         for(std::string str : conf.appenders) {
             if(str == "StdoutAppender") {
@@ -96,10 +96,10 @@ std::list<std::string> AsLoggerFactory::getAllLoggerName() {
 void AsLoggerFactory::initFromFile(const std::string& filename) {
     m_logConfer = new LogConfigurator;
     std::vector<log_config_t> confs;
-    confs = m_logConfer->setJsonConf(filename);
+    confs = m_logConfer->getConf(filename);
 
     for (auto conf : confs) {
-        AsLogger::sptr pAsLogger = initialize(conf.LoggerName, conf.outPutLevel, conf.bufferSize);
+        AsLogger::sptr pAsLogger = initialize(conf.loggerName, conf.outputLevel, conf.asyncBufferSize);
         for(std::string str : conf.appenders) {
             if(str == "StdoutAppender") {
                 pAsLogger->addAppender(new StdoutAppender());

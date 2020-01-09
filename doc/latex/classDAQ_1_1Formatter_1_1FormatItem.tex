@@ -1,0 +1,47 @@
+\hypertarget{classDAQ_1_1Formatter_1_1FormatItem}{}\section{D\+AQ\+:\+:Formatter\+:\+:Format\+Item Class Reference}
+\label{classDAQ_1_1Formatter_1_1FormatItem}\index{D\+A\+Q\+::\+Formatter\+::\+Format\+Item@{D\+A\+Q\+::\+Formatter\+::\+Format\+Item}}
+
+
+格式化项  
+
+
+
+
+{\ttfamily \#include $<$formatter.\+hpp$>$}
+
+
+
+Inheritance diagram for D\+AQ\+:\+:Formatter\+:\+:Format\+Item\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Formatter_1_1FormatItem_adaf9d830f72420073044f69d2abf6431}\label{classDAQ_1_1Formatter_1_1FormatItem_adaf9d830f72420073044f69d2abf6431}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classDAQ_1_1Formatter_1_1FormatItem}{Format\+Item} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Formatter_1_1FormatItem_a40d746aebe0934c1730596c17939476b}\label{classDAQ_1_1Formatter_1_1FormatItem_a40d746aebe0934c1730596c17939476b}} 
+{\bfseries Format\+Item} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Formatter_1_1FormatItem_a4a69a6300e46d39a17ed9f74802bf240}\label{classDAQ_1_1Formatter_1_1FormatItem_a4a69a6300e46d39a17ed9f74802bf240}} 
+virtual std\+::string {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Formatter_1_1FormatItem_abbf11a24eb901769cd190b45f477a9c7}\label{classDAQ_1_1Formatter_1_1FormatItem_abbf11a24eb901769cd190b45f477a9c7}} 
+virtual void {\bfseries add\+Format} (std\+::ostream \&os, Log\+Event\+::sptr event)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1Formatter_1_1FormatItem_a78b44d3700c4aa4ad3bb5751195cc6a9}\label{classDAQ_1_1Formatter_1_1FormatItem_a78b44d3700c4aa4ad3bb5751195cc6a9}} 
+std\+::string {\bfseries m\+\_\+name} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+格式化项 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+formatter.\+hpp\end{DoxyCompactItemize}

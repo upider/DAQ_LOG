@@ -5,7 +5,7 @@
 
 namespace DAQ {
 
-//日志级别
+/// @brief 日志级别，对应数字为0-5
 enum class LogLevel {
     TRACE = 0,
     DEBUG = 1,
@@ -15,6 +15,11 @@ enum class LogLevel {
     FATAL = 5,
 };
 
+/// @brief LoglevelToStr 将日志等级转化为string
+///
+/// @param level 日志等级
+///
+/// @return 日志等级string
 static std::string LoglevelToStr(LogLevel level) {
     switch(level) {
 #define XX(name) \
@@ -36,4 +41,5 @@ static std::string LoglevelToStr(LogLevel level) {
 }
 
 }
+
 #endif /*__LOGLEVEL_HPP_*/

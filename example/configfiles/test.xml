@@ -1,0 +1,23 @@
+<loggers>
+
+	<logger>
+		<name>ros</name>
+		<rawFormatter>[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n</rawFormatter>
+		<appenders>
+			<appender>StdoutAppender</appender>
+		</appenders>
+		<outputLevel>0</outputLevel>
+	</logger>
+
+	<logger>
+		<name>ps</name>
+		<rawFormatter>[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n</rawFormatter>
+		<rollFileSize>3</rollFileSize>
+		<appenders>
+			<appender>SingleFileAppender</appender>
+		</appenders>
+		<singleFileName>log</singleFileName>
+		<outputLevel>1</outputLevel>
+	</logger>
+
+</loggers>

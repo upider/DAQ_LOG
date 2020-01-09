@@ -1,0 +1,15 @@
+{
+	"loggers":[{
+		"name":"ps",
+		"singleFileName":"./log",
+		"appenders":["SingleFileAppender","StdoutAppender"],
+		"rollFilePath":"",
+		"filePrefix":"",
+		"fileSubfix":"",
+		"inetAddr":"",
+		"outPutLevel":0,
+		"port":0,
+		"rollFileSize":10,
+		"bufferSize":10
+	}]
+}

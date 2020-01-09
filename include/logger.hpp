@@ -40,19 +40,19 @@ class Logger : public std::enable_shared_from_this<Logger> {
         virtual void clearAppender();
 
         virtual void setOutputLevel(LogLevel level) {
-            m_conf.outPutLevel = level;
+            m_conf.outputLevel = level;
         }
 
         virtual LogLevel getOutputLevel() const {
-            return m_conf.outPutLevel;
+            return m_conf.outputLevel;
         }
 
         virtual void setName(const std::string& name) {
-            m_conf.LoggerName = name;
+            m_conf.loggerName = name;
         }
 
         virtual const std::string getName() const {
-            return m_conf.LoggerName;
+            return m_conf.loggerName;
         }
 
         virtual void setJsonFormatter(const std::string& formatter) {
@@ -66,13 +66,13 @@ class Logger : public std::enable_shared_from_this<Logger> {
         }
 
         virtual void setFormatter(const std::string& formatter) {
-            m_conf.rowFormatter = formatter;
+            m_conf.rawFormatter = formatter;
             m_formatter.reset(new Formatter(formatter));
         }
 
         virtual void setFormatter(const Formatter& formatter) {
             m_formatter = std::make_shared<Formatter>(formatter);
-            m_conf.rowFormatter = formatter.getPattern();
+            m_conf.rawFormatter = formatter.getPattern();
         }
 
         virtual void setConfig(const log_config_t& conf) {
@@ -91,8 +91,8 @@ class Logger : public std::enable_shared_from_this<Logger> {
         Logger(const std::string& name, const LogLevel level, size_t size = 256)
             : m_conf(name, level, size) {
 
-            if (m_conf.rowFormatter != "") {
-                m_formatter.reset(new Formatter(m_conf.rowFormatter));
+            if (m_conf.rawFormatter != "") {
+                m_formatter.reset(new Formatter(m_conf.rawFormatter));
             } else {
                 m_formatter.reset(new Formatter("[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n"));
             }
@@ -125,8 +125,8 @@ class AsLogger: public Logger {
                  const LogLevel level = LogLevel::TRACE, size_t size = 256)
             : Logger(name, level, size) {
 
-            if (m_conf.rowFormatter != "") {
-                m_formatter.reset(new Formatter(m_conf.rowFormatter));
+            if (m_conf.rawFormatter != "") {
+                m_formatter.reset(new Formatter(m_conf.rawFormatter));
             } else {
                 m_formatter.reset(new Formatter("[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n"));
             }
@@ -137,7 +137,7 @@ class AsLogger: public Logger {
                 m_jsonFormatter.reset(new Formatter("[{\"headers\":{\"app_id\":\"%N\"},\"body\":\"%d{%Y-%m-%d %H:%M:%S},%p,%f:%l,%C,%M,%t,%m\"}]"));
             }
 
-            m_buffer = moodycamel::ConcurrentQueue<LogEvent::sptr>(m_conf.bufferSize);
+            m_buffer = moodycamel::ConcurrentQueue<LogEvent::sptr>(m_conf.asyncBufferSize);
             pullEvent(m_buffer, m_appendersMap);
         }
 
@@ -146,7 +146,7 @@ class AsLogger: public Logger {
                               std::map<std::string, Appender*>& appenders);
 
         size_t getBufferSize() const {
-            return m_conf.bufferSize;
+            return m_conf.asyncBufferSize;
         }
 
         virtual void log(LogLevel level, const std::string& msg) override;

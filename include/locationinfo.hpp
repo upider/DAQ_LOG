@@ -13,6 +13,9 @@ class LocationInfo {
         static const char* const NA;
         static const char* const NA_METHOD;
 
+        /// @brief getLocationUnavailable 不使用LocationInfo时的位置信息
+        ///
+        /// @return LocationInfo
         static const LocationInfo& getLocationUnavailable();
 
 

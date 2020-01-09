@@ -3,7 +3,7 @@
 namespace DAQ {
 
 void Logger::log(LogLevel level, const std::string& msg) {
-    if (level >= m_conf.outPutLevel) {
+    if (level >= m_conf.outputLevel) {
         auto self(shared_from_this());
         LogEvent::sptr event(new LogEvent(self->getName(), level, msg, LocationInfo::getLocationUnavailable()));
         for(auto it = m_appendersMap.begin() ; it != m_appendersMap.end(); ++it) {
@@ -13,7 +13,7 @@ void Logger::log(LogLevel level, const std::string& msg) {
 }
 
 void Logger::log(LogLevel level, const std::string& msg, const LocationInfo& location) {
-    if (level >= m_conf.outPutLevel) {
+    if (level >= m_conf.outputLevel) {
         auto self(shared_from_this());
         LogEvent::sptr event(new LogEvent(self->getName(), level, msg, location));
         for(auto it = m_appendersMap.begin(); it != m_appendersMap.end(); ++it) {
@@ -126,7 +126,7 @@ void AsLogger::pullEvent(moodycamel::ConcurrentQueue<LogEvent::sptr>& buffer,
 }
 
 void AsLogger::log(LogLevel level, const std::string & msg) {
-    if (level >= m_conf.outPutLevel) {
+    if (level >= m_conf.outputLevel) {
         auto self(std::dynamic_pointer_cast<AsLogger>(shared_from_this()));
         LogEvent::sptr event(new LogEvent(self->getName(), level, msg, LocationInfo::getLocationUnavailable()));
         m_buffer.try_enqueue(event);
@@ -134,7 +134,7 @@ void AsLogger::log(LogLevel level, const std::string & msg) {
 }
 
 void AsLogger::log(LogLevel level, const std::string & msg, const LocationInfo & location) {
-    if (level >= m_conf.outPutLevel) {
+    if (level >= m_conf.outputLevel) {
         auto self(std::dynamic_pointer_cast<AsLogger>(shared_from_this()));
         LogEvent::sptr event(new LogEvent(self->getName(), level, msg, location));
         m_buffer.try_enqueue(event);

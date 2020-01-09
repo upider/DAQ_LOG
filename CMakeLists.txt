@@ -3,10 +3,11 @@ set(CMAKE_TOOLCHAIN_FILE /home/yzz/Softerware/vcpkg/scripts/buildsystems/vcpkg.c
 project(DAQ_LOG)
 aux_source_directory(src LOG_SRC)
 
+find_package(Boost REQUIRED COMPONENTS fiber thread filesystem)
 find_package(CURL CONFIG REQUIRED)
 find_package(czmq CONFIG REQUIRED)
 find_package(jsoncpp CONFIG REQUIRED)
-find_package(Boost REQUIRED COMPONENTS fiber thread filesystem)
+find_package(tinyxml2 CONFIG REQUIRED)
 find_package(unofficial-concurrentqueue CONFIG REQUIRED)
 
 add_library(sylar_log SHARED ${LOG_SRC})
@@ -19,13 +20,16 @@ target_include_directories(
 
 target_link_libraries(
 	sylar_log PRIVATE
+	CURL::libcurl
 	czmq-static
 	jsoncpp_lib
-	CURL::libcurl
+	tinyxml2::tinyxml2
 	unofficial::concurrentqueue::concurrentqueue
 	${Boost_LIBRARIES}
 	)
 
+add_executable(xmlconf_test ./example/xmlconf.cpp)
+target_link_libraries(xmlconf_test  sylar_log)
 add_executable(single_test ./example/singlefile.cpp)
 target_link_libraries(single_test  sylar_log)
 add_executable(backtrace_test ./example/backtrace_test.cpp)
@@ -44,8 +48,8 @@ add_executable(std_log_test ./example/stdtest.cpp)
 target_link_libraries(std_log_test sylar_log -pthread)
 add_executable(fileroll_log_test ./example/filerolltest.cpp)
 target_link_libraries(fileroll_log_test sylar_log -pthread)
-add_executable(conf_log_test ./example/config_test.cpp)
-target_link_libraries(conf_log_test sylar_log -pthread)
+add_executable(jsonconf_test ./example/jsonconf.cpp)
+target_link_libraries(jsonconf_test sylar_log)
 
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

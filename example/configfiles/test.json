@@ -1,0 +1,32 @@
+{
+	"loggers":[{
+		"name":"ps",
+		"singleFileName":"log",
+		"rowFormatter":"[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n",
+		"jsonFormatter":"[{\"headers\":{\"app_id\":\"%N\"},\"body\":\"%d{%Y-%m-%d %H:%M:%S},%p,%f:%l,%C,%M,%t,%m\"}]",
+		"appenders":["HTTPAppender","StdoutAppender"],
+		"rollFilePath":"",
+		"filePrefix":"",
+		"fileSubfix":"",
+		"inetAddr":"192.168.43.141",
+		"outputLevel":0,
+		"port":44444,
+		"rollFileSize":10,
+		"bufferSize":1024
+	},
+	{
+		"name":"ros",
+		"rowFormatter":"[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n",
+		"jsonFormatter":"[{\"headers\":{\"app_id\":\"%N\"},\"body\":\"%d{%Y-%m-%d %H:%M:%S},%p,%f:%l,%C,%M,%t,%m\"}]",
+		"singleFileName":"/home/yzz/Desktop/log1",
+		"Appenders":["HTTPAppender","StdoutAppender"],
+		"rollFilePath":"",
+		"filePrefix":"",
+		"fileSubfix":"",
+		"inetAddr":"192.168.43.141",
+		"outputLevel":0,
+		"port":44444,
+		"rollFileSize":10,
+		"bufferSize":1024
+	}]
+}

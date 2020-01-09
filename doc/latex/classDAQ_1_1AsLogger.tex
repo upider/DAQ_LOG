@@ -1,0 +1,43 @@
+\hypertarget{classDAQ_1_1AsLogger}{}\section{D\+AQ\+:\+:As\+Logger Class Reference}
+\label{classDAQ_1_1AsLogger}\index{D\+A\+Q\+::\+As\+Logger@{D\+A\+Q\+::\+As\+Logger}}
+
+
+Inheritance diagram for D\+AQ\+:\+:As\+Logger\+:
+% FIG 0
+
+
+Collaboration diagram for D\+AQ\+:\+:As\+Logger\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1AsLogger_a6e542f8cacc0b5855053ddb3f3bd4ded}\label{classDAQ_1_1AsLogger_a6e542f8cacc0b5855053ddb3f3bd4ded}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classDAQ_1_1AsLogger}{As\+Logger} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1AsLogger_a93e985bccdbc8cd33ea8942428006e55}\label{classDAQ_1_1AsLogger_a93e985bccdbc8cd33ea8942428006e55}} 
+{\bfseries As\+Logger} (const std\+::string \&name=\char`\"{}root\char`\"{}, const Log\+Level level=Log\+Level\+::\+T\+R\+A\+CE, size\+\_\+t size=256)
+\item 
+\mbox{\Hypertarget{classDAQ_1_1AsLogger_a4c1db9ad5e4339eb85039bcb924dacae}\label{classDAQ_1_1AsLogger_a4c1db9ad5e4339eb85039bcb924dacae}} 
+size\+\_\+t {\bfseries get\+Buffer\+Size} () const
+\item 
+\mbox{\Hypertarget{classDAQ_1_1AsLogger_a99137266d36c48b9bf8ac81579ab95d9}\label{classDAQ_1_1AsLogger_a99137266d36c48b9bf8ac81579ab95d9}} 
+virtual void {\bfseries log} (Log\+Level level, const std\+::string \&msg) override
+\item 
+\mbox{\Hypertarget{classDAQ_1_1AsLogger_a999896d08d961f3789a157fa2c2eebd6}\label{classDAQ_1_1AsLogger_a999896d08d961f3789a157fa2c2eebd6}} 
+virtual void {\bfseries log} (Log\+Level level, const std\+::string \&msg, const \hyperlink{classDAQ_1_1LocationInfo}{Location\+Info} \&location) override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1AsLogger_a042eee77197e36286ef5e763a230903b}\label{classDAQ_1_1AsLogger_a042eee77197e36286ef5e763a230903b}} 
+static void {\bfseries pull\+Event} (moodycamel\+::\+Concurrent\+Queue$<$ Log\+Event\+::sptr $>$ \&buffer, std\+::map$<$ std\+::string, \hyperlink{classDAQ_1_1Appender}{Appender} $\ast$$>$ \&appenders)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logger.\+hpp\end{DoxyCompactItemize}

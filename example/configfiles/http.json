@@ -1,0 +1,17 @@
+{
+	"loggers":[{
+		"name":"ps",
+		"singleFileName":"/home/yzz/Desktop/log",
+		"rawFormatter":"[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n",
+		"jsonFormatter":"[{\"headers\":{\"app_id\":\"%N\"},\"body\":\"%d{%Y-%m-%d %H:%M:%S},%p,%f:%l,%C,%M,%t,%m\"}]",
+		"appenders":["HTTPAppender"],
+		"rollFilePath":"",
+		"rollFilePrefix":"",
+		"rollFileSubfix":"",
+		"inetAddr":"192.168.43.141",
+		"outputLevel":0,
+		"port":44444,
+		"rollFileSize":10,
+		"asyncBufferSize":1024
+	}]
+}

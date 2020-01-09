@@ -46,7 +46,6 @@ class LogEvent {
         static uint32_t getThreadId() {
             std::ostringstream oss;
             oss << getpid();
-            //oss << std::this_thread::get_id();
             uint32_t tid = std::stoull(oss.str());
             return tid;
         }
@@ -83,10 +82,6 @@ class LogEvent {
     private:
         std::string m_loggerName = "root";       //logger名字
         LogLevel m_level = LogLevel::TRACE;      //日志级别
-        //uint32_t m_elapse = 0;                   //程序启动开始到现在的毫秒数
-        //uint32_t m_threadId = 0;                 //线程ID
-        //uint32_t m_fiberId = 0;                  //协程ID
-        //uint64_t m_time = time(0);               //开始时间时间
         std::string m_content;		             //日志内容
         const LocationInfo m_locationInfo;		 //位置信息
 };

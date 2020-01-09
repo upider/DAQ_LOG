@@ -1,0 +1,147 @@
+\hypertarget{classDAQ_1_1RollFileAppender}{}\section{D\+AQ\+:\+:Roll\+File\+Appender Class Reference}
+\label{classDAQ_1_1RollFileAppender}\index{D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}}
+
+
+滚动输出到文件  
+
+
+
+
+{\ttfamily \#include $<$appender.\+hpp$>$}
+
+
+
+Inheritance diagram for D\+AQ\+:\+:Roll\+File\+Appender\+:
+% FIG 0
+
+
+Collaboration diagram for D\+AQ\+:\+:Roll\+File\+Appender\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_ac3f22e7355e4648b9f8c55210c4a48f5}\label{classDAQ_1_1RollFileAppender_ac3f22e7355e4648b9f8c55210c4a48f5}} 
+\hyperlink{classDAQ_1_1RollFileAppender_ac3f22e7355e4648b9f8c55210c4a48f5}{Roll\+File\+Appender} ()=default
+\begin{DoxyCompactList}\small\item\em 默认构造函数 \end{DoxyCompactList}\item 
+\hyperlink{classDAQ_1_1RollFileAppender_a9ca22efe9d46c9b6a2640ca62ae5574e}{Roll\+File\+Appender} (const std\+::string \&path, u\+\_\+int32\+\_\+t size=8, const std\+::string \&prefix=\char`\"{}\char`\"{}, const std\+::string \&subfix=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_a01ac52e95b2d62e4fb9acf17b73670dd}\label{classDAQ_1_1RollFileAppender_a01ac52e95b2d62e4fb9acf17b73670dd}} 
+\hyperlink{classDAQ_1_1RollFileAppender_a01ac52e95b2d62e4fb9acf17b73670dd}{$\sim$\+Roll\+File\+Appender} ()
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDAQ_1_1RollFileAppender_a81223817b0bc2a365a8fa70271766bc2}{append} (Log\+Event\+::sptr event) override
+\begin{DoxyCompactList}\small\item\em 日志输出函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_ae5ad9874ab7775d5d6df97242eeba5c6}\label{classDAQ_1_1RollFileAppender_ae5ad9874ab7775d5d6df97242eeba5c6}} 
+void \hyperlink{classDAQ_1_1RollFileAppender_ae5ad9874ab7775d5d6df97242eeba5c6}{create\+New\+File} ()
+\begin{DoxyCompactList}\small\item\em create\+New\+File 创建新的log文件名，并不打开文件 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_aa261388f488979a3ee02ccf66fe69a2f}\label{classDAQ_1_1RollFileAppender_aa261388f488979a3ee02ccf66fe69a2f}} 
+bool {\bfseries reopen} ()
+\item 
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_ae88455f339cae96ab90016d89f9ded95}\label{classDAQ_1_1RollFileAppender_ae88455f339cae96ab90016d89f9ded95}} 
+bool {\bfseries close\+File} ()
+\item 
+void \hyperlink{classDAQ_1_1RollFileAppender_a61d55f46b0226a36a7f33fa6580525ab}{set\+Path} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em 设置输出目录 \end{DoxyCompactList}\item 
+void \hyperlink{classDAQ_1_1RollFileAppender_a068d8104f4c0ac82feadfd23520b402e}{set\+Prefix} (const std\+::string \&prefix)
+\begin{DoxyCompactList}\small\item\em 设置前缀 \end{DoxyCompactList}\item 
+void \hyperlink{classDAQ_1_1RollFileAppender_a15303e8f223e7b279f0a3cd97e699e2e}{set\+Subfix} (const std\+::string \&subfix)
+\begin{DoxyCompactList}\small\item\em 设置后缀 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+滚动输出到文件 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_a9ca22efe9d46c9b6a2640ca62ae5574e}\label{classDAQ_1_1RollFileAppender_a9ca22efe9d46c9b6a2640ca62ae5574e}} 
+\index{D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}!Roll\+File\+Appender@{Roll\+File\+Appender}}
+\index{Roll\+File\+Appender@{Roll\+File\+Appender}!D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}}
+\subsubsection{\texorpdfstring{Roll\+File\+Appender()}{RollFileAppender()}}
+{\footnotesize\ttfamily D\+A\+Q\+::\+Roll\+File\+Appender\+::\+Roll\+File\+Appender (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{u\+\_\+int32\+\_\+t}]{size = {\ttfamily 8},  }\item[{const std\+::string \&}]{prefix = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{subfix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & 日志存放目录 \\
+\hline
+{\em size} & 文件大小 \\
+\hline
+{\em prefix} & 文件前缀 \\
+\hline
+{\em subfix} & 文件后缀 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_a81223817b0bc2a365a8fa70271766bc2}\label{classDAQ_1_1RollFileAppender_a81223817b0bc2a365a8fa70271766bc2}} 
+\index{D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}!append@{append}}
+\index{append@{append}!D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void D\+A\+Q\+::\+Roll\+File\+Appender\+::append (\begin{DoxyParamCaption}\item[{Log\+Event\+::sptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+日志输出函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 日志事件} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDAQ_1_1Appender_a49ebbcec4d879ba461080479fa1085aa}{D\+A\+Q\+::\+Appender}.
+
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_a61d55f46b0226a36a7f33fa6580525ab}\label{classDAQ_1_1RollFileAppender_a61d55f46b0226a36a7f33fa6580525ab}} 
+\index{D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}!set\+Path@{set\+Path}}
+\index{set\+Path@{set\+Path}!D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}}
+\subsubsection{\texorpdfstring{set\+Path()}{setPath()}}
+{\footnotesize\ttfamily void D\+A\+Q\+::\+Roll\+File\+Appender\+::set\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置输出目录 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 输出目录} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_a068d8104f4c0ac82feadfd23520b402e}\label{classDAQ_1_1RollFileAppender_a068d8104f4c0ac82feadfd23520b402e}} 
+\index{D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}!set\+Prefix@{set\+Prefix}}
+\index{set\+Prefix@{set\+Prefix}!D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}}
+\subsubsection{\texorpdfstring{set\+Prefix()}{setPrefix()}}
+{\footnotesize\ttfamily void D\+A\+Q\+::\+Roll\+File\+Appender\+::set\+Prefix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置前缀 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 前缀} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDAQ_1_1RollFileAppender_a15303e8f223e7b279f0a3cd97e699e2e}\label{classDAQ_1_1RollFileAppender_a15303e8f223e7b279f0a3cd97e699e2e}} 
+\index{D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}!set\+Subfix@{set\+Subfix}}
+\index{set\+Subfix@{set\+Subfix}!D\+A\+Q\+::\+Roll\+File\+Appender@{D\+A\+Q\+::\+Roll\+File\+Appender}}
+\subsubsection{\texorpdfstring{set\+Subfix()}{setSubfix()}}
+{\footnotesize\ttfamily void D\+A\+Q\+::\+Roll\+File\+Appender\+::set\+Subfix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{subfix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+设置后缀 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 后缀} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+appender.\+hpp\end{DoxyCompactItemize}
