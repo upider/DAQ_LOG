@@ -1,6 +1,7 @@
 #include "appender.hpp"
 #include "loggerfactory.hpp"
 
+using namespace DAQ;
 int main(void)
 {
     auto lf = LoggerFactory::instance();

@@ -6,6 +6,8 @@
 #include <sstream>
 #include <execinfo.h>
 
+namespace DAQ {
+
 void Backtrace(std::vector<std::string>& bt, int size, int skip) {
     void** array = (void**)malloc(sizeof(void*)*size);
     size_t s = ::backtrace(array, size);
@@ -33,4 +35,5 @@ std::string BacktraceToString(int size, int skip, const std::string& prefix) {
     return ss.str();
 }
 
+}
 #endif /*__BACKTRACE_HPP_*/

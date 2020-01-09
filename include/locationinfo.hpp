@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace DAQ {
+
 class LocationInfo {
     public:
         /**
@@ -38,6 +40,8 @@ class LocationInfo {
 
 
 };
+
+}
 
 #define LOCATIONINFO LocationInfo(__FILE__, __PRETTY_FUNCTION__, __LINE__)
 

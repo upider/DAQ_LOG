@@ -11,6 +11,8 @@
 #include "locationinfo.hpp"
 #include "loglevel.hpp"
 
+
+namespace DAQ {
 /*
  * @brief 构造函数
  * @param[in] logger 日志器
@@ -89,4 +91,5 @@ class LogEvent {
         const LocationInfo m_locationInfo;		 //位置信息
 };
 
+}
 #endif /*__EVENT_HPP_ */

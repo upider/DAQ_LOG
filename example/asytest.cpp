@@ -1,7 +1,9 @@
 #include "loggerfactory.hpp"
 
+using namespace DAQ;
+
 int main(void) {
-    AsLoggerFactory::instance()->initFromFile("/home/yzz/Documents/codes/CXX/sylar/log/tests/astest.json");
+    AsLoggerFactory::instance()->initFromFile("./example/jsonfiles/astest.json");
     auto logger1 = AsLoggerFactory::instance()->initialize("ps");
 
     for (int i = 0; i < 10; ++i) {

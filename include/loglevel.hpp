@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace DAQ {
+
 //日志级别
 enum class LogLevel {
     TRACE = 0,
@@ -31,5 +33,7 @@ static std::string LoglevelToStr(LogLevel level) {
         return "Unknow";
     }
     return "Unknow";
+}
+
 }
 #endif /*__LOGLEVEL_HPP_*/

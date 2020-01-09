@@ -3,6 +3,8 @@
 #include <json/json.h>
 #include "logconfig.hpp"
 
+namespace DAQ {
+
 LogConfigurator::LogConfigurator() {}
 
 LogConfigurator::~LogConfigurator() {}
@@ -33,7 +35,7 @@ std::vector<log_config_t> LogConfigurator::setJsonConf(const std::string& filena
 
 
 std::vector<log_config_t> LogConfigurator::ReadJsonFromFile(const std::string& filename) {
-    Json::Reader reader;// 解析json用Json::Reader
+    Json::CharReaderBuilder readerBuilder;
     Json::Value value; // Json::Value是一种很重要的类型，可以代表任意类型。如int, string, object, array
 
     std::ifstream in(filename, std::ios::binary);
@@ -42,7 +44,8 @@ std::vector<log_config_t> LogConfigurator::ReadJsonFromFile(const std::string& f
         std::cout << "LogConfigurator::ReadJsonFromFile open file error" << std::endl;
         return confs;
     }
-    if(reader.parse(in, value)) {
+    JSONCPP_STRING errs;
+    if(Json::parseFromStream(readerBuilder, in, &value, &errs)) {
         for (unsigned int i = 0; i < value["Loggers"].size(); ++i) {
             log_config_t conf;
             conf.LoggerName = value["Loggers"][i]["name"].asString();
@@ -67,7 +70,9 @@ std::vector<log_config_t> LogConfigurator::ReadJsonFromFile(const std::string& f
         in.close();
         return confs;
     } else {
-        std::cout << "LogConfigurator::ReadJsonFromFile parse file error" << std::endl;
+        std::cout << "ERROR: " << errs << std::endl;
         return confs;
     }
+}
+
 }

@@ -1,5 +1,7 @@
 #include "logger.hpp"
 
+namespace DAQ {
+
 void Logger::log(LogLevel level, const std::string& msg) {
     if (level >= m_conf.outPutLevel) {
         auto self(shared_from_this());
@@ -137,4 +139,6 @@ void AsLogger::log(LogLevel level, const std::string & msg, const LocationInfo &
         LogEvent::sptr event(new LogEvent(self->getName(), level, msg, location));
         m_buffer.try_enqueue(event);
     }
+}
+
 }

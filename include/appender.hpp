@@ -13,6 +13,8 @@
 #include "loglevel.hpp"
 #include "formatter.hpp"
 
+namespace DAQ {
+
 /// \输出器的虚基类
 class Appender {
     public:
@@ -231,4 +233,5 @@ class HTTPAppender : public Appender {
         struct curl_httppost *last = NULL;
 };
 
+} //DAQ
 #endif /*__APPENDER_HPP_*/

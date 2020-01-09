@@ -14,6 +14,8 @@
 #include "logconfig.hpp"
 #include "appender.hpp"
 
+namespace DAQ {
+
 //日志器
 class Logger : public std::enable_shared_from_this<Logger> {
     public:
@@ -154,4 +156,5 @@ class AsLogger: public Logger {
         moodycamel::ConcurrentQueue<LogEvent::sptr> m_buffer;
 };
 
+}
 #endif /* __LOGGER_HPP_ */

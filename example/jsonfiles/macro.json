@@ -1,7 +1,7 @@
 {
 	"Loggers":[{
 		"name":"ps",
-		"singleFileName":"",
+		"singleFileName":"hello",
 		"appenders":["StdoutAppender"],
 		"rollFilePath":"",
 		"filePrefix":"",

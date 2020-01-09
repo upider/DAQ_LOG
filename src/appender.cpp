@@ -7,7 +7,9 @@
 #include <json/json.h>
 #include "appender.hpp"
 
+namespace DAQ {
 //Appender
+/*******************************************************************************/
 Appender::Appender(const Formatter formater) {
     m_formatter = std::make_shared<Formatter>(formater);
 }
@@ -108,6 +110,11 @@ SingleFileAppender::SingleFileAppender(const std::string & name): m_fileName(nam
     std::stringstream ss;
     ss << "::FileAppender:" << m_fileName;
     m_id += ss.str();
+    if(boost::filesystem::exists(m_fileName)) {
+        std::cout << m_fileName << " exists, it will be covered" << std::endl;
+    } else {
+        std::cout << m_fileName << " not exit, it will be created" << std::endl;
+    }
     if (!reopen()) {
         std::cout << "SingleFileAppender open file error!"  << std::endl;
     }
@@ -231,4 +238,6 @@ HTTPAppender::~HTTPAppender() {
     if (pCurl) {
         curl_easy_cleanup(pCurl);
     }
+}
+
 }

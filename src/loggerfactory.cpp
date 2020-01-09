@@ -1,6 +1,8 @@
 #include "loggerfactory.hpp"
 #include <functional>
 
+namespace DAQ {
+
 //LoggerFactory
 /*******************************************************************************/
 LoggerFactory* LoggerFactory::m_factory = nullptr;
@@ -125,4 +127,6 @@ AsLogger::sptr AsLoggerFactory::initialize(const std::string & name, const LogLe
     }
 
     return pAsLogger;
+}
+
 }

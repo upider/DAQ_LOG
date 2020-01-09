@@ -5,6 +5,7 @@
 #include <functional>
 #include "formatter.hpp"
 
+namespace DAQ {
 //Formatter
 /*******************************************************************************/
 Formatter::Formatter(const std::string& pattern): m_pattern(pattern) {
@@ -79,4 +80,6 @@ void Formatter::patternParser() {
             m_items.emplace_back(new DateTimeFormatItem(std::get<1>(ele)));
         }
     }
+}
+
 }

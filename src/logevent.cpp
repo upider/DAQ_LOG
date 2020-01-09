@@ -1,5 +1,7 @@
 #include "logevent.hpp"
 
+namespace DAQ {
+
 LogEvent::LogEvent() {}
 LogEvent::LogEvent(const std::string& loggerName, LogLevel level,
                    const std::string& msg, const LocationInfo& locationInfo)
@@ -7,3 +9,5 @@ LogEvent::LogEvent(const std::string& loggerName, LogLevel level,
       m_level(level),
       m_content(msg),
       m_locationInfo(locationInfo) {}
+
+}

@@ -1,5 +1,6 @@
 #include "loggerfactory.hpp"
 
+using namespace DAQ;
 class A {
     public:
         A() {}
@@ -18,7 +19,7 @@ class A {
 int main()
 {
     A a;
-    AsLoggerFactory::instance()->initFromFile("/home/yzz/Documents/codes/CXX/sylar/log/tests/macro.json");
+    AsLoggerFactory::instance()->initFromFile("./example/jsonfiles/astest.json");
     a.print();
     []() {
         AsLoggerFactory::instance()->initialize("ps")->info("111111111111", LOCATIONINFO);

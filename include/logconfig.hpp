@@ -5,6 +5,8 @@
 #include <vector>
 #include "loglevel.hpp"
 
+namespace DAQ {
+
 typedef struct LogConfigStruct {
     public:
         LogConfigStruct() {}
@@ -60,4 +62,5 @@ class LogConfigurator {
         virtual ~LogConfigurator();
 };
 
+}
 #endif /* __LOGCONFIG_HPP_ */

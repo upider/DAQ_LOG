@@ -26,6 +26,8 @@ target_link_libraries(
 	${Boost_LIBRARIES}
 	)
 
+add_executable(single_test ./example/singlefile.cpp)
+target_link_libraries(single_test  sylar_log)
 add_executable(backtrace_test ./example/backtrace_test.cpp)
 target_link_libraries(backtrace_test sylar_log)
 add_executable(http_log_test ./example/httptest.cpp)

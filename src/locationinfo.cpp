@@ -1,5 +1,7 @@
 #include "locationinfo.hpp"
 
+namespace DAQ {
+
 const char* const LocationInfo::NA = "??";
 const char* const LocationInfo::NA_METHOD = "??::??";
 
@@ -80,4 +82,6 @@ const std::string LocationInfo::getClassName() const {
     }
     //tmp.erase(0, tmp.length());
     return "??";
+}
+
 }

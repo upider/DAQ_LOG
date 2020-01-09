@@ -7,6 +7,8 @@
 #include "logconfig.hpp"
 #include "logger.hpp"
 
+namespace DAQ {
+
 //同步Logger工厂
 class LoggerFactory: public boost::noncopyable {
     public:
@@ -142,4 +144,5 @@ class AsLoggerFactory : public boost::noncopyable {
 }
 /*******************************************************************************/
 
+}
 #endif /* __LOGGERFACTORY_HPP_ */

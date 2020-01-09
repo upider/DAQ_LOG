@@ -9,28 +9,8 @@
 #include "loglevel.hpp"
 #include "logevent.hpp"
 
-/*
- * 自定义样式
- * %d 输出日志时间点的日期或时间，默认格式为ISO8601，也可以在其后指定格式，
- *    比如：%d{yyy MMM dd HH:mm:ss , SSS}，%d{ABSOLUTE}，%d{DATE}
- * %f 文件名
- * %F 协程名
- * %l 输出语句所在的行数
- * %m 输出代码中指定的讯息，如log(message)中的message
- * %M 输出方法名
- * %p 输出日志级别，即DEBUG，INFO，WARN，ERROR，FATAL
- * %r 输出自应用启动到输出该log信息耗费的毫秒数elapse
- * %t 输出产生该日志事件的线程名
- * %n 换行
- * %T TAB
- * %% 用来输出百分号“%”
- * %C 输出Logger所在类的名称，通常就是所在类的全名
- * %N logger name
- */
+namespace DAQ {
 
-/**
- * @brief 日志格式化类
- */
 class Formatter {
     public:
         using sptr = std::shared_ptr<Formatter>;
@@ -196,4 +176,5 @@ class NewLineFormatItem : public Formatter::FormatItem {
         }
 };
 
+}
 #endif /*__FORMATTER_HPP_*/

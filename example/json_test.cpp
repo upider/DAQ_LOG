@@ -2,6 +2,7 @@
 #include <chrono>
 #include "loggerfactory.hpp"
 
+using namespace DAQ;
 int main(int argc, char* argv[]) {
     auto lf = LoggerFactory::instance();
     auto logger = lf->initialize();
