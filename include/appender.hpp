@@ -13,7 +13,7 @@
 #include "loglevel.hpp"
 #include "formatter.hpp"
 
-namespace DAQ {
+namespace daq {
 
 /// 输出器的虚基类
 class Appender {

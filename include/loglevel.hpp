@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace DAQ {
+namespace daq {
 
 /// @brief 日志级别，对应数字为0-5
 enum class LogLevel {

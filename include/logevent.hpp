@@ -12,7 +12,7 @@
 #include "loglevel.hpp"
 
 
-namespace DAQ {
+namespace daq {
 /*
  * @brief 构造函数
  * @param[in] logger 日志器

@@ -1,6 +1,6 @@
 #include "logger.hpp"
 
-namespace DAQ {
+namespace daq {
 
 void Logger::log(LogLevel level, const std::string& msg) {
     if (level >= m_conf.outputLevel) {

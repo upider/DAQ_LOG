@@ -8,7 +8,7 @@
 
 #include "logconfig.hpp"
 
-namespace DAQ {
+namespace daq {
 
 std::string LogConfigurator::getConfFileName() const {
     return m_configFile;
@@ -17,7 +17,7 @@ std::string LogConfigurator::getConfFileName() const {
 std::vector<log_config_t> LogConfigurator::getConf(const std::string& filename) {
     m_configFile = filename;
     if(!boost::filesystem::exists(filename)) {
-        throw std::runtime_error("file not exists!");
+        throw std::runtime_error(filename + " : file not exists!");
     }
     boost::filesystem::path p(filename);
     if (p.extension() == ".json") {
@@ -26,7 +26,7 @@ std::vector<log_config_t> LogConfigurator::getConf(const std::string& filename) 
         return readXMLFromFile(filename);
     }
     else {
-        return readTxtFromFile(filename);
+        throw std::runtime_error(filename + " : file is not json or xml");
     }
 }
 
@@ -149,13 +149,6 @@ std::vector<log_config_t> LogConfigurator::readXMLFromFile(const std::string& fi
         throw std::runtime_error("LogConfigurator::readXMLFromFile parser file error!");
     }
     return confs;
-}
-
-std::vector<log_config_t> LogConfigurator::readTxtFromFile(const std::string& filename) {
-    std::ifstream in(filename, std::ios::binary);
-    if (!in.is_open()) {
-        throw std::runtime_error("LogConfigurator::readTxtFromFile open file error!");
-    }
 }
 
 }

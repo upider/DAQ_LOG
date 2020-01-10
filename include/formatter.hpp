@@ -9,7 +9,7 @@
 #include "loglevel.hpp"
 #include "logevent.hpp"
 
-namespace DAQ {
+namespace daq {
 
 class Formatter {
     public:

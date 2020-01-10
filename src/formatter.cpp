@@ -5,7 +5,7 @@
 #include <functional>
 #include "formatter.hpp"
 
-namespace DAQ {
+namespace daq {
 //Formatter
 /*******************************************************************************/
 Formatter::Formatter(const std::string& pattern): m_pattern(pattern) {

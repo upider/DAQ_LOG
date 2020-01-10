@@ -6,7 +6,7 @@
 #include <sstream>
 #include <execinfo.h>
 
-namespace DAQ {
+namespace daq {
 
 /// \brief Backtrace 获取函数栈信息
 ///

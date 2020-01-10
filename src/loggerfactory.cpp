@@ -1,7 +1,7 @@
 #include "loggerfactory.hpp"
 #include <functional>
 
-namespace DAQ {
+namespace daq {
 
 //LoggerFactory
 /*******************************************************************************/

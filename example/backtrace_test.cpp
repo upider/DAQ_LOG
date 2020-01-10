@@ -1,7 +1,7 @@
 #include <iostream>
 #include "backtrace.hpp"
 
-using namespace DAQ;
+using namespace daq;
 void test() {
     std::cout << "hello" << std::endl;
     std::vector<std::string> bt;

@@ -7,7 +7,7 @@
 #include "logconfig.hpp"
 #include "logger.hpp"
 
-namespace DAQ {
+namespace daq {
 
 /// 同步Logger工厂
 class LoggerFactory: public boost::noncopyable {

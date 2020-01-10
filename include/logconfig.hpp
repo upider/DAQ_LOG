@@ -5,7 +5,7 @@
 #include <vector>
 #include "loglevel.hpp"
 
-namespace DAQ {
+namespace daq {
 
 /// @brief 配置log的结构体，包含所有能够配置的选项
 typedef struct LogConfigStruct {
@@ -63,7 +63,6 @@ class LogConfigurator {
     private:
         static std::vector<log_config_t> readJsonFromFile(const std::string& filename);
         static std::vector<log_config_t> readXMLFromFile(const std::string& filename);
-        static std::vector<log_config_t> readTxtFromFile(const std::string& filename);
 
     public:
         LogConfigurator() = default;

@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace DAQ {
+namespace daq {
 
 class LocationInfo {
     public:

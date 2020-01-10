@@ -14,7 +14,7 @@
 #include "logconfig.hpp"
 #include "appender.hpp"
 
-namespace DAQ {
+namespace daq {
 
 //日志器
 class Logger : public std::enable_shared_from_this<Logger> {

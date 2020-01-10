@@ -54,6 +54,11 @@
 	4. RollFileAppender：滚动文件日志输出
 	5. HTTPAppender：HTTP发送日志到服务器端,适合发送到Flume
 
+## 配置文件
+
+	1. json
+	2. xml
+
 ## 不提供TCP、UDP和syslog的Appender
 
 	本库的设计思想是配合Flume，搭建日志服务器；或者本地调试

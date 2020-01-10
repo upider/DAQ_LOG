@@ -1,6 +1,6 @@
 #include "locationinfo.hpp"
 
-namespace DAQ {
+namespace daq {
 
 const char* const LocationInfo::NA = "??";
 const char* const LocationInfo::NA_METHOD = "??::??";

@@ -7,7 +7,7 @@
 #include <json/json.h>
 #include "appender.hpp"
 
-namespace DAQ {
+namespace daq {
 //Appender
 /*******************************************************************************/
 Appender::Appender(const Formatter formater) {

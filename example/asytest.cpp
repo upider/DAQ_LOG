@@ -1,6 +1,6 @@
 #include "loggerfactory.hpp"
 
-using namespace DAQ;
+using namespace daq;
 
 int main(void) {
     AsLoggerFactory::instance()->initFromFile("./example/jsonfiles/astest.json");

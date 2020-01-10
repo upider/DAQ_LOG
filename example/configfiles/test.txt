@@ -1,0 +1,9 @@
+loggers = ros ps
+
+ros.rawFormatter = [%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n
+ros.singleFileName = log
+ros.appenders = StdoutAppender SingleFileAppender
+
+ros.rawFormatter = [%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n
+ros.singleFileName = log
+ros.appenders = StdoutAppender SingleFileAppender
