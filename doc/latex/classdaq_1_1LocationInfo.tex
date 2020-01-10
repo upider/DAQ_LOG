@@ -1,0 +1,72 @@
+\hypertarget{classdaq_1_1LocationInfo}{}\section{daq\+:\+:Location\+Info Class Reference}
+\label{classdaq_1_1LocationInfo}\index{daq\+::\+Location\+Info@{daq\+::\+Location\+Info}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a478eb221c1d8c79950b071dcce7fa37b}\label{classdaq_1_1LocationInfo_a478eb221c1d8c79950b071dcce7fa37b}} 
+{\bfseries Location\+Info} (const char $\ast$const file\+Name, const char $\ast$const function\+Name, int line\+Number)
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a304d89149f63986833e9a349540324d5}\label{classdaq_1_1LocationInfo_a304d89149f63986833e9a349540324d5}} 
+{\bfseries Location\+Info} (const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&src)
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_ada51118aec2a595cb2524d4f01c36862}\label{classdaq_1_1LocationInfo_ada51118aec2a595cb2524d4f01c36862}} 
+\hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \& {\bfseries operator=} (const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&src)
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_ac48bbbc323b7e0ba45ba68db011fe04b}\label{classdaq_1_1LocationInfo_ac48bbbc323b7e0ba45ba68db011fe04b}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a5029a369a96fea28fd4f2d4e44ca5e61}\label{classdaq_1_1LocationInfo_a5029a369a96fea28fd4f2d4e44ca5e61}} 
+const std\+::string {\bfseries get\+Class\+Name} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a0fcf6f200652b49362632b670033cfc7}\label{classdaq_1_1LocationInfo_a0fcf6f200652b49362632b670033cfc7}} 
+const char $\ast$ {\bfseries get\+File\+Name} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a77255172ed0c04dd3a15fc48205009d0}\label{classdaq_1_1LocationInfo_a77255172ed0c04dd3a15fc48205009d0}} 
+int {\bfseries get\+Line\+Number} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a5f253a2b90744b08d76199799771fb24}\label{classdaq_1_1LocationInfo_a5f253a2b90744b08d76199799771fb24}} 
+const std\+::string {\bfseries get\+Method\+Name} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \& \hyperlink{classdaq_1_1LocationInfo_a3e1a9b86cb3b5f35accb70db5dc62ed4}{get\+Location\+Unavailable} ()
+\begin{DoxyCompactList}\small\item\em get\+Location\+Unavailable 不使用\+Location\+Info时的位置信息 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$const \hyperlink{classdaq_1_1LocationInfo_aea318a7eecc96e89ac2470810071111c}{NA}
+\item 
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a9a9d0810de543046a08104e5135b6e91}\label{classdaq_1_1LocationInfo_a9a9d0810de543046a08104e5135b6e91}} 
+static const char $\ast$const {\bfseries N\+A\+\_\+\+M\+E\+T\+H\+OD}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_a3e1a9b86cb3b5f35accb70db5dc62ed4}\label{classdaq_1_1LocationInfo_a3e1a9b86cb3b5f35accb70db5dc62ed4}} 
+\index{daq\+::\+Location\+Info@{daq\+::\+Location\+Info}!get\+Location\+Unavailable@{get\+Location\+Unavailable}}
+\index{get\+Location\+Unavailable@{get\+Location\+Unavailable}!daq\+::\+Location\+Info@{daq\+::\+Location\+Info}}
+\subsubsection{\texorpdfstring{get\+Location\+Unavailable()}{getLocationUnavailable()}}
+{\footnotesize\ttfamily static const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info}\& daq\+::\+Location\+Info\+::get\+Location\+Unavailable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+get\+Location\+Unavailable 不使用\+Location\+Info时的位置信息 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classdaq_1_1LocationInfo}{Location\+Info} 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classdaq_1_1LocationInfo_aea318a7eecc96e89ac2470810071111c}\label{classdaq_1_1LocationInfo_aea318a7eecc96e89ac2470810071111c}} 
+\index{daq\+::\+Location\+Info@{daq\+::\+Location\+Info}!NA@{NA}}
+\index{NA@{NA}!daq\+::\+Location\+Info@{daq\+::\+Location\+Info}}
+\subsubsection{\texorpdfstring{NA}{NA}}
+{\footnotesize\ttfamily const char$\ast$ const daq\+::\+Location\+Info\+::\+NA\hspace{0.3cm}{\ttfamily [static]}}
+
+得不到文件名或行号就返回空 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+locationinfo.\+hpp\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@ digraph "Graphical Class Hierarchy"
   rankdir="LR";
   Node0 [label="noncopyable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node0 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="DAQ::AsLoggerFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDAQ_1_1AsLoggerFactory.html",tooltip="异步Logger工厂 "];
+  Node0 [label="daq::AsLoggerFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdaq_1_1AsLoggerFactory.html",tooltip="异步Logger工厂 "];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="DAQ::LoggerFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDAQ_1_1LoggerFactory.html",tooltip="同步Logger工厂 "];
+  Node2 [label="daq::LoggerFactory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdaq_1_1LoggerFactory.html",tooltip="同步Logger工厂 "];
 }

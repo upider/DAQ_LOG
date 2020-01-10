@@ -1,0 +1,114 @@
+\hypertarget{classdaq_1_1LoggerFactory}{}\section{daq\+:\+:Logger\+Factory Class Reference}
+\label{classdaq_1_1LoggerFactory}\index{daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}}
+
+
+同步\+Logger工厂  
+
+
+
+
+{\ttfamily \#include $<$loggerfactory.\+hpp$>$}
+
+
+
+Inheritance diagram for daq\+:\+:Logger\+Factory\+:
+% FIG 0
+
+
+Collaboration diagram for daq\+:\+:Logger\+Factory\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1LoggerFactory_ad7320171ee45ecceecace4ce086b1eb1}\label{classdaq_1_1LoggerFactory_ad7320171ee45ecceecace4ce086b1eb1}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classdaq_1_1LoggerFactory}{Logger\+Factory} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::string $>$ \hyperlink{classdaq_1_1LoggerFactory_a5e4c7a7700337417663dac8ffeb584ae}{get\+All\+Logger\+Name} ()
+\begin{DoxyCompactList}\small\item\em get\+All\+Logger\+Name 返回已经有的logger的name \end{DoxyCompactList}\item 
+Logger\+::sptr \hyperlink{classdaq_1_1LoggerFactory_ad417ef89981205a406dd4fa29e3b4c7a}{initialize} (const std\+::string \&name=\char`\"{}root\char`\"{}, const Log\+Level level=Log\+Level\+::\+T\+R\+A\+CE)
+\begin{DoxyCompactList}\small\item\em initialize 初始化日志logger \end{DoxyCompactList}\item 
+void \hyperlink{classdaq_1_1LoggerFactory_a1286f3c2d1f58ba2ac2ecc19150b8ae1}{init\+From\+File} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em init\+From\+File 从文件初始化logger \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdaq_1_1LoggerFactory_ae59e7c1b14d99b023b54974d61050956}\label{classdaq_1_1LoggerFactory_ae59e7c1b14d99b023b54974d61050956}} 
+Logger\+::sptr {\bfseries get\+First\+Logger} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classdaq_1_1LoggerFactory}{Logger\+Factory} $\ast$ \hyperlink{classdaq_1_1LoggerFactory_ab8772fd3e644f8885a4024e0f0c70b49}{instance} ()
+\begin{DoxyCompactList}\small\item\em instance 返回logger工厂实例 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+同步\+Logger工厂 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaq_1_1LoggerFactory_a5e4c7a7700337417663dac8ffeb584ae}\label{classdaq_1_1LoggerFactory_a5e4c7a7700337417663dac8ffeb584ae}} 
+\index{daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}!get\+All\+Logger\+Name@{get\+All\+Logger\+Name}}
+\index{get\+All\+Logger\+Name@{get\+All\+Logger\+Name}!daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}}
+\subsubsection{\texorpdfstring{get\+All\+Logger\+Name()}{getAllLoggerName()}}
+{\footnotesize\ttfamily std\+::list$<$std\+::string$>$ daq\+::\+Logger\+Factory\+::get\+All\+Logger\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+All\+Logger\+Name 返回已经有的logger的name 
+
+\begin{DoxyReturn}{Returns}
+logger\+Names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdaq_1_1LoggerFactory_a1286f3c2d1f58ba2ac2ecc19150b8ae1}\label{classdaq_1_1LoggerFactory_a1286f3c2d1f58ba2ac2ecc19150b8ae1}} 
+\index{daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}!init\+From\+File@{init\+From\+File}}
+\index{init\+From\+File@{init\+From\+File}!daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}}
+\subsubsection{\texorpdfstring{init\+From\+File()}{initFromFile()}}
+{\footnotesize\ttfamily void daq\+::\+Logger\+Factory\+::init\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+init\+From\+File 从文件初始化logger 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & 文件名 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1LoggerFactory_ad417ef89981205a406dd4fa29e3b4c7a}\label{classdaq_1_1LoggerFactory_ad417ef89981205a406dd4fa29e3b4c7a}} 
+\index{daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}!initialize@{initialize}}
+\index{initialize@{initialize}!daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily Logger\+::sptr daq\+::\+Logger\+Factory\+::initialize (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}root\char`\"{}},  }\item[{const Log\+Level}]{level = {\ttfamily LogLevel\+:\+:TRACE} }\end{DoxyParamCaption})}
+
+
+
+initialize 初始化日志logger 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & loggr名 \\
+\hline
+{\em level} & 输出日志等级\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+logger的智能指针 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdaq_1_1LoggerFactory_ab8772fd3e644f8885a4024e0f0c70b49}\label{classdaq_1_1LoggerFactory_ab8772fd3e644f8885a4024e0f0c70b49}} 
+\index{daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}!instance@{instance}}
+\index{instance@{instance}!daq\+::\+Logger\+Factory@{daq\+::\+Logger\+Factory}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \hyperlink{classdaq_1_1LoggerFactory}{Logger\+Factory}$\ast$ daq\+::\+Logger\+Factory\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+instance 返回logger工厂实例 
+
+\begin{DoxyReturn}{Returns}
+Logger\+Factory$\ast$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+loggerfactory.\+hpp\end{DoxyCompactItemize}

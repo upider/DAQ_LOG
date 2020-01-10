@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rollfileappender',['RollFileAppender',['../classDAQ_1_1RollFileAppender.html',1,'DAQ::RollFileAppender'],['../classDAQ_1_1RollFileAppender.html#ac3f22e7355e4648b9f8c55210c4a48f5',1,'DAQ::RollFileAppender::RollFileAppender()=default'],['../classDAQ_1_1RollFileAppender.html#a9ca22efe9d46c9b6a2640ca62ae5574e',1,'DAQ::RollFileAppender::RollFileAppender(const std::string &amp;path, u_int32_t size=8, const std::string &amp;prefix=&quot;&quot;, const std::string &amp;subfix=&quot;&quot;)']]]
+  ['rollfileappender',['RollFileAppender',['../classdaq_1_1RollFileAppender.html',1,'daq::RollFileAppender'],['../classdaq_1_1RollFileAppender.html#a2bf4e22ee17d673a2541e2bd658cc260',1,'daq::RollFileAppender::RollFileAppender()=default'],['../classdaq_1_1RollFileAppender.html#aca76aebe714fc6c86e9392f3d9753306',1,'daq::RollFileAppender::RollFileAppender(const std::string &amp;path, u_int32_t size=8, const std::string &amp;prefix=&quot;&quot;, const std::string &amp;subfix=&quot;&quot;)']]]
 ];

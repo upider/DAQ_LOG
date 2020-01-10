@@ -1,0 +1,81 @@
+\hypertarget{classdaq_1_1SingleFileAppender}{}\section{daq\+:\+:Single\+File\+Appender Class Reference}
+\label{classdaq_1_1SingleFileAppender}\index{daq\+::\+Single\+File\+Appender@{daq\+::\+Single\+File\+Appender}}
+
+
+输出到指定文件  
+
+
+
+
+{\ttfamily \#include $<$appender.\+hpp$>$}
+
+
+
+Inheritance diagram for daq\+:\+:Single\+File\+Appender\+:
+% FIG 0
+
+
+Collaboration diagram for daq\+:\+:Single\+File\+Appender\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classdaq_1_1SingleFileAppender_a6b44636dd0b021d7d4103d4894d10e0a}{Single\+File\+Appender} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1SingleFileAppender_a1cb74c4e11be30c100c614dbc65e94d6}{append} (Log\+Event\+::sptr event) override
+\begin{DoxyCompactList}\small\item\em 日志输出函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdaq_1_1SingleFileAppender_ad4b4b8c66e7359d71806dd48a45617a5}\label{classdaq_1_1SingleFileAppender_ad4b4b8c66e7359d71806dd48a45617a5}} 
+void {\bfseries set\+File\+Name} (const std\+::string \&filename)
+\item 
+\mbox{\Hypertarget{classdaq_1_1SingleFileAppender_a17594a2f919eeec0f23047103fbffafc}\label{classdaq_1_1SingleFileAppender_a17594a2f919eeec0f23047103fbffafc}} 
+bool {\bfseries reopen} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+输出到指定文件 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdaq_1_1SingleFileAppender_a6b44636dd0b021d7d4103d4894d10e0a}\label{classdaq_1_1SingleFileAppender_a6b44636dd0b021d7d4103d4894d10e0a}} 
+\index{daq\+::\+Single\+File\+Appender@{daq\+::\+Single\+File\+Appender}!Single\+File\+Appender@{Single\+File\+Appender}}
+\index{Single\+File\+Appender@{Single\+File\+Appender}!daq\+::\+Single\+File\+Appender@{daq\+::\+Single\+File\+Appender}}
+\subsubsection{\texorpdfstring{Single\+File\+Appender()}{SingleFileAppender()}}
+{\footnotesize\ttfamily daq\+::\+Single\+File\+Appender\+::\+Single\+File\+Appender (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 日志文件名} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaq_1_1SingleFileAppender_a1cb74c4e11be30c100c614dbc65e94d6}\label{classdaq_1_1SingleFileAppender_a1cb74c4e11be30c100c614dbc65e94d6}} 
+\index{daq\+::\+Single\+File\+Appender@{daq\+::\+Single\+File\+Appender}!append@{append}}
+\index{append@{append}!daq\+::\+Single\+File\+Appender@{daq\+::\+Single\+File\+Appender}}
+\subsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily virtual void daq\+::\+Single\+File\+Appender\+::append (\begin{DoxyParamCaption}\item[{Log\+Event\+::sptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+日志输出函数 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 日志事件} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classdaq_1_1Appender_a66e8f896daf7ad4a82769949b351b994}{daq\+::\+Appender}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+appender.\+hpp\end{DoxyCompactItemize}

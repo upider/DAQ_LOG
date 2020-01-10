@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newlineformatitem',['NewLineFormatItem',['../classDAQ_1_1NewLineFormatItem.html',1,'DAQ']]]
+  ['newlineformatitem',['NewLineFormatItem',['../classdaq_1_1NewLineFormatItem.html',1,'daq']]]
 ];

@@ -1,0 +1,73 @@
+\hypertarget{structdaq_1_1LogConfigStruct}{}\section{daq\+:\+:Log\+Config\+Struct Struct Reference}
+\label{structdaq_1_1LogConfigStruct}\index{daq\+::\+Log\+Config\+Struct@{daq\+::\+Log\+Config\+Struct}}
+
+
+配置log的结构体，包含所有能够配置的选项  
+
+
+
+
+{\ttfamily \#include $<$logconfig.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a644278faae9f113b2668ef075bb9c154}\label{structdaq_1_1LogConfigStruct_a644278faae9f113b2668ef075bb9c154}} 
+{\bfseries Log\+Config\+Struct} (std\+::string name, Log\+Level level)
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a65c881154642ad9d4291f3be356aaa2c}\label{structdaq_1_1LogConfigStruct_a65c881154642ad9d4291f3be356aaa2c}} 
+{\bfseries Log\+Config\+Struct} (std\+::string name, Log\+Level level, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_ab137ec2e23fda6ff0873c24f2807e7ee}\label{structdaq_1_1LogConfigStruct_ab137ec2e23fda6ff0873c24f2807e7ee}} 
+void {\bfseries operator=} (const \hyperlink{structdaq_1_1LogConfigStruct}{Log\+Config\+Struct} \&rth)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_ade3405df5a80a10823ad6e02cb752611}\label{structdaq_1_1LogConfigStruct_ade3405df5a80a10823ad6e02cb752611}} 
+std\+::string {\bfseries logger\+Name} = \char`\"{}root\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_ae0f3d3079ea92e732bd044458b0ee322}\label{structdaq_1_1LogConfigStruct_ae0f3d3079ea92e732bd044458b0ee322}} 
+std\+::string {\bfseries raw\+Formatter} = \char`\"{}\mbox{[}\%d\{\%Y-\/\%m-\/\%d \%H\+:\%M\+:\%S\}\mbox{]} \mbox{[}\%p\mbox{]} \mbox{[}\%f\+:\%l\mbox{]} \mbox{[}\%N\mbox{]} \mbox{[}\%C\mbox{]} \mbox{[}\%M\mbox{]} \mbox{[}\%t\mbox{]} \%m\%n\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_afe11ed37a453d6f92030c13b0e437eea}\label{structdaq_1_1LogConfigStruct_afe11ed37a453d6f92030c13b0e437eea}} 
+std\+::string {\bfseries json\+Formatter} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_aeba3a8722e9b7cca1a10169ccd1e0fa5}\label{structdaq_1_1LogConfigStruct_aeba3a8722e9b7cca1a10169ccd1e0fa5}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries appenders} = \{\}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a1deffa67d39ae66486a4d903c99f0a66}\label{structdaq_1_1LogConfigStruct_a1deffa67d39ae66486a4d903c99f0a66}} 
+std\+::string {\bfseries single\+File\+Name} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a951462551669a1e5ed8fdc9c55f7968c}\label{structdaq_1_1LogConfigStruct_a951462551669a1e5ed8fdc9c55f7968c}} 
+std\+::string {\bfseries roll\+File\+Path} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a1c7a237e8e881a358a1f70319fa892f0}\label{structdaq_1_1LogConfigStruct_a1c7a237e8e881a358a1f70319fa892f0}} 
+std\+::string {\bfseries roll\+File\+Prefix} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a86ea6dce8edf4f8666709ff0e3874094}\label{structdaq_1_1LogConfigStruct_a86ea6dce8edf4f8666709ff0e3874094}} 
+std\+::string {\bfseries roll\+File\+Subfix} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a9f116d5a796d9c9c8a00239665d3cfd3}\label{structdaq_1_1LogConfigStruct_a9f116d5a796d9c9c8a00239665d3cfd3}} 
+size\+\_\+t {\bfseries roll\+File\+Size} = 0
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_afd109c9963afa4478cf61fc2afa6070f}\label{structdaq_1_1LogConfigStruct_afd109c9963afa4478cf61fc2afa6070f}} 
+std\+::string {\bfseries inet\+Addr} = \char`\"{}\char`\"{}
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_ad0e58c4bebd8efe24ab544b11e1a4c7e}\label{structdaq_1_1LogConfigStruct_ad0e58c4bebd8efe24ab544b11e1a4c7e}} 
+size\+\_\+t {\bfseries port} = 0
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a0c734005018b752abf706988ba5c4273}\label{structdaq_1_1LogConfigStruct_a0c734005018b752abf706988ba5c4273}} 
+size\+\_\+t {\bfseries async\+Buffer\+Size} = 0
+\item 
+\mbox{\Hypertarget{structdaq_1_1LogConfigStruct_a66e55a9a3929bfe9a66804d47ee52267}\label{structdaq_1_1LogConfigStruct_a66e55a9a3929bfe9a66804d47ee52267}} 
+Log\+Level {\bfseries output\+Level} = Log\+Level\+::\+T\+R\+A\+CE
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+配置log的结构体，包含所有能够配置的选项 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logconfig.\+hpp\end{DoxyCompactItemize}

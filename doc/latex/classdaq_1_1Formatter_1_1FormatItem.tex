@@ -1,0 +1,47 @@
+\hypertarget{classdaq_1_1Formatter_1_1FormatItem}{}\section{daq\+:\+:Formatter\+:\+:Format\+Item Class Reference}
+\label{classdaq_1_1Formatter_1_1FormatItem}\index{daq\+::\+Formatter\+::\+Format\+Item@{daq\+::\+Formatter\+::\+Format\+Item}}
+
+
+格式化项  
+
+
+
+
+{\ttfamily \#include $<$formatter.\+hpp$>$}
+
+
+
+Inheritance diagram for daq\+:\+:Formatter\+:\+:Format\+Item\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_1_1FormatItem_a12e165e54d52b7e20dd01287265e25cb}\label{classdaq_1_1Formatter_1_1FormatItem_a12e165e54d52b7e20dd01287265e25cb}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classdaq_1_1Formatter_1_1FormatItem}{Format\+Item} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_1_1FormatItem_a18fde9050646c2822375fc4b9bf7f5a9}\label{classdaq_1_1Formatter_1_1FormatItem_a18fde9050646c2822375fc4b9bf7f5a9}} 
+{\bfseries Format\+Item} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_1_1FormatItem_a0261c48393c716f3b3123ae29d2453ec}\label{classdaq_1_1Formatter_1_1FormatItem_a0261c48393c716f3b3123ae29d2453ec}} 
+virtual std\+::string {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_1_1FormatItem_a51a0174332368df8b6dc047de8558b2e}\label{classdaq_1_1Formatter_1_1FormatItem_a51a0174332368df8b6dc047de8558b2e}} 
+virtual void {\bfseries add\+Format} (std\+::ostream \&os, Log\+Event\+::sptr event)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_1_1FormatItem_a90c74679c495924cb79233ceffd6dc07}\label{classdaq_1_1Formatter_1_1FormatItem_a90c74679c495924cb79233ceffd6dc07}} 
+std\+::string {\bfseries m\+\_\+name} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+格式化项 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+formatter.\+hpp\end{DoxyCompactItemize}

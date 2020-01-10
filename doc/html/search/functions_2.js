@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['format',['format',['../classDAQ_1_1Formatter.html#a76cd0f04adcfac5c592a57eba8a01a8f',1,'DAQ::Formatter']]],
-  ['formatter',['Formatter',['../classDAQ_1_1Formatter.html#a4b0b8f984b2f0bfe9fc73982c00d8d62',1,'DAQ::Formatter::Formatter(const std::string &amp;pattern)'],['../classDAQ_1_1Formatter.html#aa41860a9f75808fa93eb593bdb542f1e',1,'DAQ::Formatter::Formatter()=default']]]
+  ['format',['format',['../classdaq_1_1Formatter.html#ab060743da2f5e48c5021b10dfc3439d3',1,'daq::Formatter']]],
+  ['formatter',['Formatter',['../classdaq_1_1Formatter.html#a62bedb8ff686edc0e19c1b6d9130e354',1,'daq::Formatter::Formatter(const std::string &amp;pattern)'],['../classdaq_1_1Formatter.html#aeb73224a684f226d46092536d7e20edd',1,'daq::Formatter::Formatter()=default']]]
 ];

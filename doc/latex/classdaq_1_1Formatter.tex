@@ -1,0 +1,80 @@
+\hypertarget{classdaq_1_1Formatter}{}\section{daq\+:\+:Formatter Class Reference}
+\label{classdaq_1_1Formatter}\index{daq\+::\+Formatter@{daq\+::\+Formatter}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classdaq_1_1Formatter_1_1FormatItem}{Format\+Item}
+\begin{DoxyCompactList}\small\item\em 格式化项 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_ae857cb199ddfdafbc9bfa3204d25d4b5}\label{classdaq_1_1Formatter_ae857cb199ddfdafbc9bfa3204d25d4b5}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classdaq_1_1Formatter}{Formatter} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_ac2ae2c7b79e090d996b1a6c8491d4cfd}\label{classdaq_1_1Formatter_ac2ae2c7b79e090d996b1a6c8491d4cfd}} 
+void \hyperlink{classdaq_1_1Formatter_ac2ae2c7b79e090d996b1a6c8491d4cfd}{pattern\+Parser} ()
+\begin{DoxyCompactList}\small\item\em pattern\+Parser 初始化时解析格式 \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classdaq_1_1Formatter_ab060743da2f5e48c5021b10dfc3439d3}{format} (Log\+Event\+::sptr event)
+\begin{DoxyCompactList}\small\item\em format 格式化日志事件 \end{DoxyCompactList}\item 
+\hyperlink{classdaq_1_1Formatter_a62bedb8ff686edc0e19c1b6d9130e354}{Formatter} (const std\+::string \&pattern)
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_aeb73224a684f226d46092536d7e20edd}\label{classdaq_1_1Formatter_aeb73224a684f226d46092536d7e20edd}} 
+\hyperlink{classdaq_1_1Formatter_aeb73224a684f226d46092536d7e20edd}{Formatter} ()=default
+\begin{DoxyCompactList}\small\item\em 构造函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_a5dd988fb194686310100a722f1bb4a92}\label{classdaq_1_1Formatter_a5dd988fb194686310100a722f1bb4a92}} 
+virtual \hyperlink{classdaq_1_1Formatter_a5dd988fb194686310100a722f1bb4a92}{$\sim$\+Formatter} ()=default
+\begin{DoxyCompactList}\small\item\em 析构函数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_ab329d883433a924780a4e424c4539e99}\label{classdaq_1_1Formatter_ab329d883433a924780a4e424c4539e99}} 
+std\+::string {\bfseries get\+Pattern} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_a03814eb9c2073df5371b896402c9a925}\label{classdaq_1_1Formatter_a03814eb9c2073df5371b896402c9a925}} 
+std\+::vector$<$ Format\+Item\+::sptr $>$ {\bfseries m\+\_\+items}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Formatter_a434129d1255aa29561d914b345f1e99a}\label{classdaq_1_1Formatter_a434129d1255aa29561d914b345f1e99a}} 
+std\+::string {\bfseries m\+\_\+pattern}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdaq_1_1Formatter_a62bedb8ff686edc0e19c1b6d9130e354}\label{classdaq_1_1Formatter_a62bedb8ff686edc0e19c1b6d9130e354}} 
+\index{daq\+::\+Formatter@{daq\+::\+Formatter}!Formatter@{Formatter}}
+\index{Formatter@{Formatter}!daq\+::\+Formatter@{daq\+::\+Formatter}}
+\subsubsection{\texorpdfstring{Formatter()}{Formatter()}}
+{\footnotesize\ttfamily daq\+::\+Formatter\+::\+Formatter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pattern }\end{DoxyParamCaption})}
+
+
+
+构造函数 
+
+pattern 要使用的日志格式(字符串) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaq_1_1Formatter_ab060743da2f5e48c5021b10dfc3439d3}\label{classdaq_1_1Formatter_ab060743da2f5e48c5021b10dfc3439d3}} 
+\index{daq\+::\+Formatter@{daq\+::\+Formatter}!format@{format}}
+\index{format@{format}!daq\+::\+Formatter@{daq\+::\+Formatter}}
+\subsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily virtual std\+::string daq\+::\+Formatter\+::format (\begin{DoxyParamCaption}\item[{Log\+Event\+::sptr}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+format 格式化日志事件 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & 日志事件\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+日志事件字符串 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+formatter.\+hpp\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['datetimeformatitem',['DateTimeFormatItem',['../classDAQ_1_1DateTimeFormatItem.html',1,'DAQ']]]
+  ['datetimeformatitem',['DateTimeFormatItem',['../classdaq_1_1DateTimeFormatItem.html',1,'daq']]]
 ];

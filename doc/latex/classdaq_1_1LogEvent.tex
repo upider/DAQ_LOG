@@ -1,0 +1,58 @@
+\hypertarget{classdaq_1_1LogEvent}{}\section{daq\+:\+:Log\+Event Class Reference}
+\label{classdaq_1_1LogEvent}\index{daq\+::\+Log\+Event@{daq\+::\+Log\+Event}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_ad02016fc3f4254ead31e411ffa8ffbac}\label{classdaq_1_1LogEvent_ad02016fc3f4254ead31e411ffa8ffbac}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classdaq_1_1LogEvent}{Log\+Event} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a80a814b66875b74bc1407ddc2f69a552}\label{classdaq_1_1LogEvent_a80a814b66875b74bc1407ddc2f69a552}} 
+{\bfseries Log\+Event} (const std\+::string \&Logger\+Name, Log\+Level level, const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location\+Info)
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a2f6acb3cc63087e192b437f9fd21632c}\label{classdaq_1_1LogEvent_a2f6acb3cc63087e192b437f9fd21632c}} 
+const Log\+Level {\bfseries get\+Level} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_aa16f9763bc51d9925d8875bba9e20daf}\label{classdaq_1_1LogEvent_aa16f9763bc51d9925d8875bba9e20daf}} 
+void {\bfseries set\+Level} (Log\+Level level)
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_aec78800a719d5fdff81506626bdbb658}\label{classdaq_1_1LogEvent_aec78800a719d5fdff81506626bdbb658}} 
+const std\+::string {\bfseries get\+Content} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a73f8415f0a876d7ee6cc0a7b66972d27}\label{classdaq_1_1LogEvent_a73f8415f0a876d7ee6cc0a7b66972d27}} 
+std\+::string {\bfseries get\+Logger\+Name} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a1fc1935a0172887fdabf876a361bbb3d}\label{classdaq_1_1LogEvent_a1fc1935a0172887fdabf876a361bbb3d}} 
+void {\bfseries set\+Logger\+Name} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_ae3b6c5802e0c84df14cc275f63da1eba}\label{classdaq_1_1LogEvent_ae3b6c5802e0c84df14cc275f63da1eba}} 
+const char $\ast$ {\bfseries get\+File\+Name} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a12cada322544d0e98aee4a45256ddb53}\label{classdaq_1_1LogEvent_a12cada322544d0e98aee4a45256ddb53}} 
+int {\bfseries get\+Line\+Number} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a837482b5acfc9891fe9a0a3f1e749973}\label{classdaq_1_1LogEvent_a837482b5acfc9891fe9a0a3f1e749973}} 
+const std\+::string {\bfseries get\+Class\+Name} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_afe838e3d7e40a4901c928eff2a887862}\label{classdaq_1_1LogEvent_afe838e3d7e40a4901c928eff2a887862}} 
+const std\+::string {\bfseries get\+Method\+Name} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a0354ce048c55395aca2eec5af9050369}\label{classdaq_1_1LogEvent_a0354ce048c55395aca2eec5af9050369}} 
+static uint32\+\_\+t {\bfseries get\+Thread\+Id} ()
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a4c6b7e5161f6c1bda5158eae8da4d385}\label{classdaq_1_1LogEvent_a4c6b7e5161f6c1bda5158eae8da4d385}} 
+static std\+::string {\bfseries get\+Fiber\+Id} ()
+\item 
+\mbox{\Hypertarget{classdaq_1_1LogEvent_a1cb4bfd570cc1edbf9aff16f9b8db832}\label{classdaq_1_1LogEvent_a1cb4bfd570cc1edbf9aff16f9b8db832}} 
+static uint64\+\_\+t {\bfseries get\+Time} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logevent.\+hpp\end{DoxyCompactItemize}

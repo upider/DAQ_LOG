@@ -1,0 +1,126 @@
+\hypertarget{classdaq_1_1Logger}{}\section{daq\+:\+:Logger Class Reference}
+\label{classdaq_1_1Logger}\index{daq\+::\+Logger@{daq\+::\+Logger}}
+
+
+Inheritance diagram for daq\+:\+:Logger\+:
+% FIG 0
+
+
+Collaboration diagram for daq\+:\+:Logger\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a95175e139c9258e4dd68c7e0827e8af5}\label{classdaq_1_1Logger_a95175e139c9258e4dd68c7e0827e8af5}} 
+using {\bfseries sptr} = std\+::shared\+\_\+ptr$<$ \hyperlink{classdaq_1_1Logger}{Logger} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_aa52da3e8b7b252eafe072abb70ed0254}\label{classdaq_1_1Logger_aa52da3e8b7b252eafe072abb70ed0254}} 
+virtual void {\bfseries log} (Log\+Level level, const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a66d88aa3977bb0798d37de3a5f5cbe46}\label{classdaq_1_1Logger_a66d88aa3977bb0798d37de3a5f5cbe46}} 
+virtual void {\bfseries log} (Log\+Level level, const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_afb40eba1c380719e6fcb3dc3ce0ae90e}\label{classdaq_1_1Logger_afb40eba1c380719e6fcb3dc3ce0ae90e}} 
+virtual void {\bfseries trace} (const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a079747d1fa90c58673e44b171736b170}\label{classdaq_1_1Logger_a079747d1fa90c58673e44b171736b170}} 
+virtual void {\bfseries trace} (const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ad823f38b9fb4ec7b6695340a3dc5f0c5}\label{classdaq_1_1Logger_ad823f38b9fb4ec7b6695340a3dc5f0c5}} 
+virtual void {\bfseries warn} (const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_aaddf75d2c1f42d29ca6259ccd043d100}\label{classdaq_1_1Logger_aaddf75d2c1f42d29ca6259ccd043d100}} 
+virtual void {\bfseries warn} (const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ae2a3531f3bbe78200ebb7b831bfc9a81}\label{classdaq_1_1Logger_ae2a3531f3bbe78200ebb7b831bfc9a81}} 
+virtual void {\bfseries debug} (const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ad6bf5d2c6ebfb40010af983244d73a89}\label{classdaq_1_1Logger_ad6bf5d2c6ebfb40010af983244d73a89}} 
+virtual void {\bfseries debug} (const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ae004f467f1dd4fc13bcc0299cf0e1d18}\label{classdaq_1_1Logger_ae004f467f1dd4fc13bcc0299cf0e1d18}} 
+virtual void {\bfseries info} (const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ae57a4645fb16bd95d4324f5c105643cf}\label{classdaq_1_1Logger_ae57a4645fb16bd95d4324f5c105643cf}} 
+virtual void {\bfseries info} (const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a580a9e143fe2962ba343f6c369ee8d3b}\label{classdaq_1_1Logger_a580a9e143fe2962ba343f6c369ee8d3b}} 
+virtual void {\bfseries error} (const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a9fde9b26f081ab9c5b675b8f5e8b7b01}\label{classdaq_1_1Logger_a9fde9b26f081ab9c5b675b8f5e8b7b01}} 
+virtual void {\bfseries error} (const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a0e7d924e0cbdf5d4d825af3467b8abea}\label{classdaq_1_1Logger_a0e7d924e0cbdf5d4d825af3467b8abea}} 
+virtual void {\bfseries fatal} (const std\+::string \&msg, const \hyperlink{classdaq_1_1LocationInfo}{Location\+Info} \&location)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a02083da7b56324873c1789caf0aaed25}\label{classdaq_1_1Logger_a02083da7b56324873c1789caf0aaed25}} 
+virtual void {\bfseries fatal} (const std\+::string \&msg)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a01e9511b12a573dcdfde97065faf8d08}\label{classdaq_1_1Logger_a01e9511b12a573dcdfde97065faf8d08}} 
+virtual void {\bfseries add\+Appender} (\hyperlink{classdaq_1_1Appender}{Appender} $\ast$appender)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_aefc5c7cc5ef32470682f6f5d9bf091a0}\label{classdaq_1_1Logger_aefc5c7cc5ef32470682f6f5d9bf091a0}} 
+virtual void {\bfseries del\+Appender} (\hyperlink{classdaq_1_1Appender}{Appender} $\ast$appender)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_adc536e834a783094bad34b544d7d6f27}\label{classdaq_1_1Logger_adc536e834a783094bad34b544d7d6f27}} 
+virtual void {\bfseries clear\+Appender} ()
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_aba27cec75533c4a625453a80d10d8f5b}\label{classdaq_1_1Logger_aba27cec75533c4a625453a80d10d8f5b}} 
+virtual void {\bfseries set\+Output\+Level} (Log\+Level level)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a25447b37351baad0044153f25919430a}\label{classdaq_1_1Logger_a25447b37351baad0044153f25919430a}} 
+virtual Log\+Level {\bfseries get\+Output\+Level} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a476bf0f707e09f1a596b0b866bde21fa}\label{classdaq_1_1Logger_a476bf0f707e09f1a596b0b866bde21fa}} 
+virtual void {\bfseries set\+Name} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_af73ff307b7834b731cf6cc17148a36e5}\label{classdaq_1_1Logger_af73ff307b7834b731cf6cc17148a36e5}} 
+virtual const std\+::string {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a1c3bc00ae27695474c7f054bdabc67c8}\label{classdaq_1_1Logger_a1c3bc00ae27695474c7f054bdabc67c8}} 
+virtual void {\bfseries set\+Json\+Formatter} (const std\+::string \&formatter)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a6ce72b03ca3604ca2600a0bfe25e5006}\label{classdaq_1_1Logger_a6ce72b03ca3604ca2600a0bfe25e5006}} 
+virtual void {\bfseries set\+Json\+Formatter} (const \hyperlink{classdaq_1_1Formatter}{Formatter} \&formatter)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a0d75dceef7a9633572760853ae19afdc}\label{classdaq_1_1Logger_a0d75dceef7a9633572760853ae19afdc}} 
+virtual void {\bfseries set\+Formatter} (const std\+::string \&formatter)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a23d83680637cd9d67ea9d2e039f38176}\label{classdaq_1_1Logger_a23d83680637cd9d67ea9d2e039f38176}} 
+virtual void {\bfseries set\+Formatter} (const \hyperlink{classdaq_1_1Formatter}{Formatter} \&formatter)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_aaec0b6a70d3e3e64704f38464a86b789}\label{classdaq_1_1Logger_aaec0b6a70d3e3e64704f38464a86b789}} 
+virtual void {\bfseries set\+Config} (const \hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t} \&conf)
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ab68517334c0cf8be05b5aeee56d8f2f4}\label{classdaq_1_1Logger_ab68517334c0cf8be05b5aeee56d8f2f4}} 
+virtual std\+::list$<$ std\+::string $>$ {\bfseries get\+All\+Appender\+Name} ()
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_abedfe3414b4a74fa84507a36c88a0a5b}\label{classdaq_1_1Logger_abedfe3414b4a74fa84507a36c88a0a5b}} 
+{\bfseries Logger} (const std\+::string \&name, const Log\+Level level, size\+\_\+t size=256)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ae528a143b73c8253e089a9a1c5a0786c}\label{classdaq_1_1Logger_ae528a143b73c8253e089a9a1c5a0786c}} 
+\hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t} {\bfseries m\+\_\+conf}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_af4514fe6c2574ff7448db4c77442c10d}\label{classdaq_1_1Logger_af4514fe6c2574ff7448db4c77442c10d}} 
+std\+::map$<$ std\+::string, \hyperlink{classdaq_1_1Appender}{Appender} $\ast$ $>$ {\bfseries m\+\_\+appenders\+Map}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_a04de83a0c4f8c6178ee977bd8bb00c38}\label{classdaq_1_1Logger_a04de83a0c4f8c6178ee977bd8bb00c38}} 
+Formatter\+::sptr {\bfseries m\+\_\+formatter}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ab0ca554a6ef8ddbad003df29f3c25ebc}\label{classdaq_1_1Logger_ab0ca554a6ef8ddbad003df29f3c25ebc}} 
+Formatter\+::sptr {\bfseries m\+\_\+json\+Formatter}
+\item 
+\mbox{\Hypertarget{classdaq_1_1Logger_ac3b9376e759e14c7cf95a1b38bad9663}\label{classdaq_1_1Logger_ac3b9376e759e14c7cf95a1b38bad9663}} 
+std\+::mutex {\bfseries m\+\_\+mutex}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logger.\+hpp\end{DoxyCompactItemize}

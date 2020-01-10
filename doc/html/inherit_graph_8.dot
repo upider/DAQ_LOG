@@ -5,7 +5,7 @@ digraph "Graphical Class Hierarchy"
   rankdir="LR";
   Node22 [label="enable_shared_from_this",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node22 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="DAQ::Logger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDAQ_1_1Logger.html"];
+  Node0 [label="daq::Logger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdaq_1_1Logger.html"];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="DAQ::AsLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDAQ_1_1AsLogger.html"];
+  Node1 [label="daq::AsLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdaq_1_1AsLogger.html"];
 }
