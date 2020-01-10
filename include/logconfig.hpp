@@ -35,6 +35,7 @@ typedef struct LogConfigStruct {
             this->asyncBufferSize  = rth.asyncBufferSize;
             this->outputLevel = rth.outputLevel;
         }
+
     public:
         std::string loggerName = "root";
         std::string rawFormatter = "[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n";

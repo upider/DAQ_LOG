@@ -1,15 +1,11 @@
-{
-	"loggers":[{
 		"name":"ps",
 		"singleFileName":"hello",
 		"appenders":["StdoutAppender"],
 		"rollFilePath":"",
-		"filePrefix":"",
-		"fileSubfix":"",
 		"inetAddr":"",
 		"outPutLevel":0,
 		"port":0,
 		"rollFileSize":0,
-		"bufferSize":256
+		"asyncBbufferSize":256
 	}]
 }

@@ -1,31 +1,16 @@
 #include "loggerfactory.hpp"
 
 using namespace DAQ;
-class A {
-    public:
-        A() {}
-        ~A() {}
-        void print() {
-            for (int i = 0; i < 10; ++i) {
-                DAQ_ASLOG_ERROR("%s", "hello");
-            }
-            []() {
-                std::cout << __PRETTY_FUNCTION__ << std::endl;
-            }
-            ();
-        }
-};
-
 int main()
 {
-    A a;
-    AsLoggerFactory::instance()->initFromFile("./example/jsonfiles/astest.json");
-    a.print();
-    []() {
-        AsLoggerFactory::instance()->initialize("ps")->info("111111111111", LOCATIONINFO);
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
+    LoggerFactory::instance()->initFromFile("../example/configfiles/astest.json");
+    auto loggers = LoggerFactory::instance()->getAllLoggerName();
+    for (auto i : loggers) {
+        std::cout << i << std::endl;
     }
-    ();
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    for (int i = 0; i < 100; ++i) {
+        DLOG_INFO(LOCATIONINFO, "%s %d", "jjj", 100);
+        DLOG_INFO(LOCATIONINFO, "%s %d", "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjsssssssssssssssssssjjj", 100);
+    }
     return 0;
 }

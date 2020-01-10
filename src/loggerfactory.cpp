@@ -38,7 +38,7 @@ void LoggerFactory::initFromFile(const std::string& filename) {
         Logger::sptr pLogger = initialize(conf.loggerName, conf.outputLevel);
         pLogger->setFormatter(conf.rawFormatter);
         pLogger->setJsonFormatter(conf.jsonFormatter);
-        for(std::string str : conf.appenders) {
+        for(const std::string& str : conf.appenders) {
             if(str == "StdoutAppender") {
                 pLogger->addAppender(new StdoutAppender());
             } else if(str == "RollFileAppender") {

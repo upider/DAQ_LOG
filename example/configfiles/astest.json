@@ -1,15 +1,16 @@
 {
 	"loggers":[{
 		"name":"ps",
-		"singleFileName":"./log",
+		"singleFileName":"log",
+		"rawFormatter":"[%d{%Y-%m-%d %H:%M:%S}] [%p] [%f:%l] [%N] [%C] [%M] [%t] %m%n",
 		"appenders":["SingleFileAppender","StdoutAppender"],
 		"rollFilePath":"",
-		"filePrefix":"",
-		"fileSubfix":"",
+		"rollFfilePrefix":"",
+		"rollFileSubfix":"",
 		"inetAddr":"",
 		"outPutLevel":0,
 		"port":0,
 		"rollFileSize":10,
-		"bufferSize":10
+		"asyncBufferSize":10
 	}]
 }

@@ -30,22 +30,6 @@ std::vector<log_config_t> LogConfigurator::getConf(const std::string& filename) 
     }
 }
 
-//typedef struct LogConfigStruct {
-//    std::string LoggerName;
-//	  conf.rowFormatter;
-//    conf.jsonFormatter;
-//	  std::string[] appenders
-//    std::string singleFileName;
-//    std::string rollFilePath;
-//    std::string filePrefix;
-//    std::string fileSubfix;
-//    std::string inetAddr;
-//    LogLevel outPutLevel;
-//    size_t port;
-//    size_t rollFileSize;
-//} log_config_t;
-
-
 std::vector<log_config_t> LogConfigurator::readJsonFromFile(const std::string& filename) {
     Json::CharReaderBuilder readerBuilder;
     Json::Value value;
@@ -170,7 +154,7 @@ std::vector<log_config_t> LogConfigurator::readXMLFromFile(const std::string& fi
 std::vector<log_config_t> LogConfigurator::readTxtFromFile(const std::string& filename) {
     std::ifstream in(filename, std::ios::binary);
     if (!in.is_open()) {
-
+        throw std::runtime_error("LogConfigurator::readTxtFromFile open file error!");
     }
 }
 
