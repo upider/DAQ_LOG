@@ -13,19 +13,9 @@
 
 
 namespace daq {
-/*
- * @brief 构造函数
- * @param[in] logger 日志器
- * @param[in] level 日志级别
- * @param[in] file 文件名
- * @param[in] line 文件行号
- * @param[in] elapse 程序启动依赖的耗时(毫秒)
- * @param[in] thread_id 线程id
- * @param[in] fiber_id 协程id(boost.fiber)
- * @param[in] time 日志事件(秒)
- * @param[in] thread_name 线程名称
+/**
+ * @brief 日志事件
  */
-
 class LogEvent {
     public:
         using sptr = std::shared_ptr<LogEvent>;

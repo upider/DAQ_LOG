@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_TOOLCHAIN_FILE /home/yzz/Softerware/vcpkg/scripts/buildsystems/vcpkg.cmake)
 project(DAQ_LOG)
+
+set(CMAKE_CXX_COMPILER "g++")
+add_compile_options(-std=c++14 -w -g)
+
 aux_source_directory(src LOG_SRC)
 
 find_package(Boost REQUIRED COMPONENTS fiber thread filesystem)
@@ -33,7 +37,7 @@ target_link_libraries(xmlconf_test  sylar_log)
 add_executable(single_test ./example/singlefile.cpp)
 target_link_libraries(single_test  sylar_log)
 add_executable(backtrace_test ./example/backtrace_test.cpp)
-target_link_libraries(backtrace_test sylar_log)
+target_link_libraries(backtrace_test sylar_log dl backtrace pthread)
 add_executable(http_log_test ./example/httptest.cpp)
 target_link_libraries(http_log_test pthread sylar_log)
 add_executable(macro_log_test ./example/macrotest.cpp)

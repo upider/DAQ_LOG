@@ -59,45 +59,33 @@ virtual void {\bfseries fatal} (const std\+::string \&msg, const \hyperlink{clas
 \mbox{\Hypertarget{classdaq_1_1Logger_a02083da7b56324873c1789caf0aaed25}\label{classdaq_1_1Logger_a02083da7b56324873c1789caf0aaed25}} 
 virtual void {\bfseries fatal} (const std\+::string \&msg)
 \item 
-\mbox{\Hypertarget{classdaq_1_1Logger_a01e9511b12a573dcdfde97065faf8d08}\label{classdaq_1_1Logger_a01e9511b12a573dcdfde97065faf8d08}} 
-virtual void {\bfseries add\+Appender} (\hyperlink{classdaq_1_1Appender}{Appender} $\ast$appender)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_aefc5c7cc5ef32470682f6f5d9bf091a0}\label{classdaq_1_1Logger_aefc5c7cc5ef32470682f6f5d9bf091a0}} 
-virtual void {\bfseries del\+Appender} (\hyperlink{classdaq_1_1Appender}{Appender} $\ast$appender)
-\item 
+virtual void \hyperlink{classdaq_1_1Logger_a01e9511b12a573dcdfde97065faf8d08}{add\+Appender} (\hyperlink{classdaq_1_1Appender}{Appender} $\ast$appender)
+\begin{DoxyCompactList}\small\item\em add\+Appender 添加输出端 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1Logger_aefc5c7cc5ef32470682f6f5d9bf091a0}{del\+Appender} (\hyperlink{classdaq_1_1Appender}{Appender} $\ast$appender)
+\begin{DoxyCompactList}\small\item\em del\+Appender 删除输出端 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classdaq_1_1Logger_adc536e834a783094bad34b544d7d6f27}\label{classdaq_1_1Logger_adc536e834a783094bad34b544d7d6f27}} 
 virtual void {\bfseries clear\+Appender} ()
 \item 
-\mbox{\Hypertarget{classdaq_1_1Logger_aba27cec75533c4a625453a80d10d8f5b}\label{classdaq_1_1Logger_aba27cec75533c4a625453a80d10d8f5b}} 
-virtual void {\bfseries set\+Output\+Level} (Log\+Level level)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_a25447b37351baad0044153f25919430a}\label{classdaq_1_1Logger_a25447b37351baad0044153f25919430a}} 
-virtual Log\+Level {\bfseries get\+Output\+Level} () const
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_a476bf0f707e09f1a596b0b866bde21fa}\label{classdaq_1_1Logger_a476bf0f707e09f1a596b0b866bde21fa}} 
-virtual void {\bfseries set\+Name} (const std\+::string \&name)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_af73ff307b7834b731cf6cc17148a36e5}\label{classdaq_1_1Logger_af73ff307b7834b731cf6cc17148a36e5}} 
-virtual const std\+::string {\bfseries get\+Name} () const
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_a1c3bc00ae27695474c7f054bdabc67c8}\label{classdaq_1_1Logger_a1c3bc00ae27695474c7f054bdabc67c8}} 
-virtual void {\bfseries set\+Json\+Formatter} (const std\+::string \&formatter)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_a6ce72b03ca3604ca2600a0bfe25e5006}\label{classdaq_1_1Logger_a6ce72b03ca3604ca2600a0bfe25e5006}} 
-virtual void {\bfseries set\+Json\+Formatter} (const \hyperlink{classdaq_1_1Formatter}{Formatter} \&formatter)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_a0d75dceef7a9633572760853ae19afdc}\label{classdaq_1_1Logger_a0d75dceef7a9633572760853ae19afdc}} 
-virtual void {\bfseries set\+Formatter} (const std\+::string \&formatter)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_a23d83680637cd9d67ea9d2e039f38176}\label{classdaq_1_1Logger_a23d83680637cd9d67ea9d2e039f38176}} 
-virtual void {\bfseries set\+Formatter} (const \hyperlink{classdaq_1_1Formatter}{Formatter} \&formatter)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_aaec0b6a70d3e3e64704f38464a86b789}\label{classdaq_1_1Logger_aaec0b6a70d3e3e64704f38464a86b789}} 
-virtual void {\bfseries set\+Config} (const \hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t} \&conf)
-\item 
-\mbox{\Hypertarget{classdaq_1_1Logger_ab68517334c0cf8be05b5aeee56d8f2f4}\label{classdaq_1_1Logger_ab68517334c0cf8be05b5aeee56d8f2f4}} 
-virtual std\+::list$<$ std\+::string $>$ {\bfseries get\+All\+Appender\+Name} ()
-\item 
+virtual void \hyperlink{classdaq_1_1Logger_aba27cec75533c4a625453a80d10d8f5b}{set\+Output\+Level} (Log\+Level level)
+\begin{DoxyCompactList}\small\item\em set\+Output\+Level 设置日志输出等级 \end{DoxyCompactList}\item 
+virtual Log\+Level \hyperlink{classdaq_1_1Logger_a25447b37351baad0044153f25919430a}{get\+Output\+Level} () const
+\begin{DoxyCompactList}\small\item\em get\+Output\+Level 获取输出的日志等级 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1Logger_a476bf0f707e09f1a596b0b866bde21fa}{set\+Name} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em set\+Name 设置logger name \end{DoxyCompactList}\item 
+virtual const std\+::string \hyperlink{classdaq_1_1Logger_af73ff307b7834b731cf6cc17148a36e5}{get\+Name} () const
+\begin{DoxyCompactList}\small\item\em get\+Name 获取日志名称 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1Logger_a1c3bc00ae27695474c7f054bdabc67c8}{set\+Json\+Formatter} (const std\+::string \&formatter)
+\begin{DoxyCompactList}\small\item\em set\+Json\+Formatter 设置日志的\+Json格式 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1Logger_a6ce72b03ca3604ca2600a0bfe25e5006}{set\+Json\+Formatter} (const \hyperlink{classdaq_1_1Formatter}{Formatter} \&formatter)
+\begin{DoxyCompactList}\small\item\em set\+Json\+Formatter 设置日志的\+Json格式 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1Logger_a0d75dceef7a9633572760853ae19afdc}{set\+Formatter} (const std\+::string \&formatter)
+\begin{DoxyCompactList}\small\item\em set\+Formatter 设置日志的raw格式 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1Logger_a23d83680637cd9d67ea9d2e039f38176}{set\+Formatter} (const \hyperlink{classdaq_1_1Formatter}{Formatter} \&formatter)
+\begin{DoxyCompactList}\small\item\em set\+Formatter 设置日志的raw格式 \end{DoxyCompactList}\item 
+virtual void \hyperlink{classdaq_1_1Logger_aaec0b6a70d3e3e64704f38464a86b789}{set\+Config} (const \hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t} \&conf)
+\begin{DoxyCompactList}\small\item\em set\+Config 用配置结构体配置logger \end{DoxyCompactList}\item 
+virtual std\+::list$<$ std\+::string $>$ \hyperlink{classdaq_1_1Logger_ab68517334c0cf8be05b5aeee56d8f2f4}{get\+All\+Appender\+Name} ()
+\begin{DoxyCompactList}\small\item\em get\+All\+Appender\+Name 得到所有appender名字 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classdaq_1_1Logger_abedfe3414b4a74fa84507a36c88a0a5b}\label{classdaq_1_1Logger_abedfe3414b4a74fa84507a36c88a0a5b}} 
 {\bfseries Logger} (const std\+::string \&name, const Log\+Level level, size\+\_\+t size=256)
 \end{DoxyCompactItemize}
@@ -119,6 +107,183 @@ Formatter\+::sptr {\bfseries m\+\_\+json\+Formatter}
 \mbox{\Hypertarget{classdaq_1_1Logger_ac3b9376e759e14c7cf95a1b38bad9663}\label{classdaq_1_1Logger_ac3b9376e759e14c7cf95a1b38bad9663}} 
 std\+::mutex {\bfseries m\+\_\+mutex}
 \end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaq_1_1Logger_a01e9511b12a573dcdfde97065faf8d08}\label{classdaq_1_1Logger_a01e9511b12a573dcdfde97065faf8d08}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!add\+Appender@{add\+Appender}}
+\index{add\+Appender@{add\+Appender}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{add\+Appender()}{addAppender()}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::add\+Appender (\begin{DoxyParamCaption}\item[{\hyperlink{classdaq_1_1Appender}{Appender} $\ast$}]{appender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+add\+Appender 添加输出端 
+
+
+\begin{DoxyParams}{Parameters}
+{\em appender} & 输出端 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_aefc5c7cc5ef32470682f6f5d9bf091a0}\label{classdaq_1_1Logger_aefc5c7cc5ef32470682f6f5d9bf091a0}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!del\+Appender@{del\+Appender}}
+\index{del\+Appender@{del\+Appender}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{del\+Appender()}{delAppender()}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::del\+Appender (\begin{DoxyParamCaption}\item[{\hyperlink{classdaq_1_1Appender}{Appender} $\ast$}]{appender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+del\+Appender 删除输出端 
+
+
+\begin{DoxyParams}{Parameters}
+{\em appender} & 输出端 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_ab68517334c0cf8be05b5aeee56d8f2f4}\label{classdaq_1_1Logger_ab68517334c0cf8be05b5aeee56d8f2f4}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!get\+All\+Appender\+Name@{get\+All\+Appender\+Name}}
+\index{get\+All\+Appender\+Name@{get\+All\+Appender\+Name}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{get\+All\+Appender\+Name()}{getAllAppenderName()}}
+{\footnotesize\ttfamily virtual std\+::list$<$std\+::string$>$ daq\+::\+Logger\+::get\+All\+Appender\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+All\+Appender\+Name 得到所有appender名字 
+
+\begin{DoxyReturn}{Returns}
+std\+::list$<$std\+::string$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdaq_1_1Logger_af73ff307b7834b731cf6cc17148a36e5}\label{classdaq_1_1Logger_af73ff307b7834b731cf6cc17148a36e5}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily virtual const std\+::string daq\+::\+Logger\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+Name 获取日志名称 
+
+\begin{DoxyReturn}{Returns}
+日志名称 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdaq_1_1Logger_a25447b37351baad0044153f25919430a}\label{classdaq_1_1Logger_a25447b37351baad0044153f25919430a}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!get\+Output\+Level@{get\+Output\+Level}}
+\index{get\+Output\+Level@{get\+Output\+Level}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{get\+Output\+Level()}{getOutputLevel()}}
+{\footnotesize\ttfamily virtual Log\+Level daq\+::\+Logger\+::get\+Output\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+get\+Output\+Level 获取输出的日志等级 
+
+\begin{DoxyReturn}{Returns}
+日志等级 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdaq_1_1Logger_aaec0b6a70d3e3e64704f38464a86b789}\label{classdaq_1_1Logger_aaec0b6a70d3e3e64704f38464a86b789}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!set\+Config@{set\+Config}}
+\index{set\+Config@{set\+Config}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{set\+Config()}{setConfig()}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::set\+Config (\begin{DoxyParamCaption}\item[{const \hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t} \&}]{conf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Config 用配置结构体配置logger 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conf} & log\+\_\+config\+\_\+t \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_a0d75dceef7a9633572760853ae19afdc}\label{classdaq_1_1Logger_a0d75dceef7a9633572760853ae19afdc}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!set\+Formatter@{set\+Formatter}}
+\index{set\+Formatter@{set\+Formatter}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{set\+Formatter()}{setFormatter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::set\+Formatter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{formatter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Formatter 设置日志的raw格式 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & raw格式 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_a23d83680637cd9d67ea9d2e039f38176}\label{classdaq_1_1Logger_a23d83680637cd9d67ea9d2e039f38176}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!set\+Formatter@{set\+Formatter}}
+\index{set\+Formatter@{set\+Formatter}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{set\+Formatter()}{setFormatter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::set\+Formatter (\begin{DoxyParamCaption}\item[{const \hyperlink{classdaq_1_1Formatter}{Formatter} \&}]{formatter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Formatter 设置日志的raw格式 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & raw格式 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_a1c3bc00ae27695474c7f054bdabc67c8}\label{classdaq_1_1Logger_a1c3bc00ae27695474c7f054bdabc67c8}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!set\+Json\+Formatter@{set\+Json\+Formatter}}
+\index{set\+Json\+Formatter@{set\+Json\+Formatter}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{set\+Json\+Formatter()}{setJsonFormatter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::set\+Json\+Formatter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{formatter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Json\+Formatter 设置日志的\+Json格式 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & 格式 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_a6ce72b03ca3604ca2600a0bfe25e5006}\label{classdaq_1_1Logger_a6ce72b03ca3604ca2600a0bfe25e5006}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!set\+Json\+Formatter@{set\+Json\+Formatter}}
+\index{set\+Json\+Formatter@{set\+Json\+Formatter}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{set\+Json\+Formatter()}{setJsonFormatter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::set\+Json\+Formatter (\begin{DoxyParamCaption}\item[{const \hyperlink{classdaq_1_1Formatter}{Formatter} \&}]{formatter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Json\+Formatter 设置日志的\+Json格式 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & 格式 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_a476bf0f707e09f1a596b0b866bde21fa}\label{classdaq_1_1Logger_a476bf0f707e09f1a596b0b866bde21fa}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{set\+Name()}{setName()}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Name 设置logger name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & 日志名称 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdaq_1_1Logger_aba27cec75533c4a625453a80d10d8f5b}\label{classdaq_1_1Logger_aba27cec75533c4a625453a80d10d8f5b}} 
+\index{daq\+::\+Logger@{daq\+::\+Logger}!set\+Output\+Level@{set\+Output\+Level}}
+\index{set\+Output\+Level@{set\+Output\+Level}!daq\+::\+Logger@{daq\+::\+Logger}}
+\subsubsection{\texorpdfstring{set\+Output\+Level()}{setOutputLevel()}}
+{\footnotesize\ttfamily virtual void daq\+::\+Logger\+::set\+Output\+Level (\begin{DoxyParamCaption}\item[{Log\+Level}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Output\+Level 设置日志输出等级 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & 日志等级 \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

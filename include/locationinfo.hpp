@@ -7,9 +7,9 @@ namespace daq {
 
 class LocationInfo {
     public:
-        /**
-         * 得不到文件名或行号就返回空
-          */
+        /*
+         *  \brief 得不到文件名或行号就返?
+         */
         static const char* const NA;
         static const char* const NA_METHOD;
 
@@ -46,6 +46,9 @@ class LocationInfo {
 
 }
 
+/*
+ * 产生代码位置消息的宏
+ */
 #define LOCATIONINFO LocationInfo(__FILE__, __PRETTY_FUNCTION__, __LINE__)
 
 #endif /*__LOCATIONINFO_HPP_*/

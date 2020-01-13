@@ -12,16 +12,48 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classdaq_1_1LogConfigurator_ab1053721ed0940c15397fe0dbf42560c}\label{classdaq_1_1LogConfigurator_ab1053721ed0940c15397fe0dbf42560c}} 
-std\+::string {\bfseries get\+Conf\+File\+Name} () const
-\item 
-\mbox{\Hypertarget{classdaq_1_1LogConfigurator_a862bc0ecc399b8069aec436f855dd828}\label{classdaq_1_1LogConfigurator_a862bc0ecc399b8069aec436f855dd828}} 
-std\+::vector$<$ \hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t} $>$ {\bfseries get\+Conf} (const std\+::string \&filename)
-\end{DoxyCompactItemize}
+std\+::string \hyperlink{classdaq_1_1LogConfigurator_ab1053721ed0940c15397fe0dbf42560c}{get\+Conf\+File\+Name} () const
+\begin{DoxyCompactList}\small\item\em get\+Conf\+File\+Name 得到配置文件名 \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t} $>$ \hyperlink{classdaq_1_1LogConfigurator_a862bc0ecc399b8069aec436f855dd828}{get\+Conf} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em get\+Conf 根据配置文件返回配置结构体 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 能够配置log的类 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdaq_1_1LogConfigurator_a862bc0ecc399b8069aec436f855dd828}\label{classdaq_1_1LogConfigurator_a862bc0ecc399b8069aec436f855dd828}} 
+\index{daq\+::\+Log\+Configurator@{daq\+::\+Log\+Configurator}!get\+Conf@{get\+Conf}}
+\index{get\+Conf@{get\+Conf}!daq\+::\+Log\+Configurator@{daq\+::\+Log\+Configurator}}
+\subsubsection{\texorpdfstring{get\+Conf()}{getConf()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structdaq_1_1LogConfigStruct}{log\+\_\+config\+\_\+t}$>$ daq\+::\+Log\+Configurator\+::get\+Conf (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+get\+Conf 根据配置文件返回配置结构体 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & 配置文件名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+配置文件结构体数组 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdaq_1_1LogConfigurator_ab1053721ed0940c15397fe0dbf42560c}\label{classdaq_1_1LogConfigurator_ab1053721ed0940c15397fe0dbf42560c}} 
+\index{daq\+::\+Log\+Configurator@{daq\+::\+Log\+Configurator}!get\+Conf\+File\+Name@{get\+Conf\+File\+Name}}
+\index{get\+Conf\+File\+Name@{get\+Conf\+File\+Name}!daq\+::\+Log\+Configurator@{daq\+::\+Log\+Configurator}}
+\subsubsection{\texorpdfstring{get\+Conf\+File\+Name()}{getConfFileName()}}
+{\footnotesize\ttfamily std\+::string daq\+::\+Log\+Configurator\+::get\+Conf\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Conf\+File\+Name 得到配置文件名 
+
+\begin{DoxyReturn}{Returns}
+配置文件名 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

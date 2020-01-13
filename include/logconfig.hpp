@@ -58,7 +58,19 @@ class LogConfigurator {
     private:
         std::string m_configFile;
     public:
+        /**
+         * @brief getConfFileName 得到配置文件名
+         *
+         * @return 配置文件名
+         */
         std::string getConfFileName() const;
+        /**
+         * @brief getConf 根据配置文件返回配置结构体
+         *
+         * @param filename 配置文件名
+         *
+         * @return 配置文件结构体数组
+         */
         std::vector<log_config_t> getConf(const std::string& filename);
     private:
         static std::vector<log_config_t> readJsonFromFile(const std::string& filename);

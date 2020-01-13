@@ -35,50 +35,110 @@ class Logger : public std::enable_shared_from_this<Logger> {
         virtual void fatal(const std::string& msg, const LocationInfo& location);
         virtual void fatal(const std::string& msg);
 
+        /**
+         * @brief addAppender 添加输出端
+         *
+         * @param appender 输出端
+         */
         virtual void addAppender(Appender* appender);
+        /**
+         * @brief delAppender 删除输出端
+         *
+         * @param appender 输出端
+         */
         virtual void delAppender(Appender* appender);
         virtual void clearAppender();
 
+        /**
+         * @brief setOutputLevel 设置日志输出等级
+         *
+         * @param level 日志等级
+         */
         virtual void setOutputLevel(LogLevel level) {
             m_conf.outputLevel = level;
         }
 
+        /**
+         * @brief getOutputLevel 获取输出的日志等级
+         *
+         * @return 日志等级
+         */
         virtual LogLevel getOutputLevel() const {
             return m_conf.outputLevel;
         }
 
+        /**
+         * @brief setName 设置logger name
+         *
+         * @param name 日志名称
+         */
         virtual void setName(const std::string& name) {
             m_conf.loggerName = name;
         }
 
+        /**
+         * @brief getName 获取日志名称
+         *
+         * @return 日志名称
+         */
         virtual const std::string getName() const {
             return m_conf.loggerName;
         }
 
+        /**
+         * @brief setJsonFormatter 设置日志的Json格式
+         *
+         * @param formatter 格式
+         */
         virtual void setJsonFormatter(const std::string& formatter) {
             m_conf.jsonFormatter = formatter;
             m_jsonFormatter.reset(new Formatter(formatter));
         }
 
+        /**
+         * @brief setJsonFormatter 设置日志的Json格式
+         *
+         * @param formatter 格式
+         */
         virtual void setJsonFormatter(const Formatter& formatter) {
             m_jsonFormatter = std::make_shared<Formatter>(formatter);
             m_conf.jsonFormatter = formatter.getPattern();
         }
 
+        /**
+         * @brief setFormatter 设置日志的raw格式
+         *
+         * @param formatter raw格式
+         */
         virtual void setFormatter(const std::string& formatter) {
             m_conf.rawFormatter = formatter;
             m_formatter.reset(new Formatter(formatter));
         }
 
+        /**
+         * @brief setFormatter 设置日志的raw格式
+         *
+         * @param formatter raw格式
+         */
         virtual void setFormatter(const Formatter& formatter) {
             m_formatter = std::make_shared<Formatter>(formatter);
             m_conf.rawFormatter = formatter.getPattern();
         }
 
+        /**
+         * @brief setConfig 用配置结构体配置logger
+         *
+         * @param conf log_config_t
+         */
         virtual void setConfig(const log_config_t& conf) {
             m_conf = conf;
         }
 
+        /**
+         * @brief getAllAppenderName 得到所有appender名字
+         *
+         * @return std::list<std::string>
+         */
         virtual std::list<std::string> getAllAppenderName() {
             std::list<std::string> list;
             for (auto e : m_appendersMap) {
