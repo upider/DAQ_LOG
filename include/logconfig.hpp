@@ -21,6 +21,9 @@ typedef struct LogConfigStruct {
 
     public:
         void operator=(const LogConfigStruct& rth) {
+            if (this == &rth) {
+                return ;
+            }
             this->loggerName = rth.loggerName;
             this->rawFormatter = rth.rawFormatter;
             this->jsonFormatter = rth.jsonFormatter;

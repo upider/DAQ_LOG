@@ -3,14 +3,11 @@
 #include <iostream>
 #include <boost/stacktrace.hpp>
 #include <boost/filesystem.hpp>
-#include "backtrace.hpp"
 
-using namespace daq;
 using namespace boost;
 
 void test(int n) {
     std::vector<std::string> bt;
-    std::cout <<  BacktraceToString(n, 1, "") << std::endl;
     std::cout << stacktrace::stacktrace();
 }
 
