@@ -10,6 +10,14 @@
 
 namespace daq {
 
+LogConfigStruct::LogConfigStruct(const LogConfigStruct&& rth) {
+    *this = std::move(rth);
+}
+
+LogConfigStruct::LogConfigStruct(const LogConfigStruct& rth) {
+    *this = rth;
+}
+
 std::string LogConfigurator::getConfFileName() const {
     return m_configFile;
 }

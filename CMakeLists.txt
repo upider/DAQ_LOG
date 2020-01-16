@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-set(CMAKE_TOOLCHAIN_FILE /home/yzz/Softerware/vcpkg/scripts/buildsystems/vcpkg.cmake)
+set(CMAKE_TOOLCHAIN_FILE /home/yzz/snap/vcpkg/scripts/buildsystems/vcpkg.cmake)
 project(DAQ_LOG)
 
 set(CMAKE_CXX_COMPILER "g++")

@@ -29,7 +29,14 @@ LocationInfo::LocationInfo(const LocationInfo & rth)
        m_methodName(rth.m_methodName) {
 }
 
-LocationInfo & LocationInfo::operator = (const LocationInfo & rth) {
+LocationInfo& LocationInfo::operator=(const LocationInfo& rth) {
+    m_fileName = rth.m_fileName;
+    m_methodName = rth.m_methodName;
+    m_lineNumber = rth.m_lineNumber;
+    return *this;
+}
+
+LocationInfo& LocationInfo::operator=(const LocationInfo&& rth) {
     m_fileName = rth.m_fileName;
     m_methodName = rth.m_methodName;
     m_lineNumber = rth.m_lineNumber;

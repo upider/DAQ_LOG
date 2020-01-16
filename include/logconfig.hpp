@@ -10,19 +10,21 @@ namespace daq {
 /// @brief 配置log的结构体，包含所有能够配置的选项
 typedef struct LogConfigStruct {
     public:
+        LogConfigStruct(const LogConfigStruct&& rth);
+        LogConfigStruct(const LogConfigStruct& rth);
         LogConfigStruct() = default;
-        LogConfigStruct(std::string name, LogLevel level)
+        explicit LogConfigStruct(std::string name, LogLevel level)
             : loggerName(name),
               outputLevel(level) {}
-        LogConfigStruct(std::string name, LogLevel level, size_t size)
+        explicit LogConfigStruct(std::string name, LogLevel level, size_t size)
             : loggerName(name),
               asyncBufferSize(size),
               outputLevel(level) {}
 
     public:
-        void operator=(const LogConfigStruct& rth) {
+        LogConfigStruct& operator=(const LogConfigStruct&& rth) {
             if (this == &rth) {
-                return ;
+                return *this;
             }
             this->loggerName = rth.loggerName;
             this->rawFormatter = rth.rawFormatter;
@@ -37,6 +39,30 @@ typedef struct LogConfigStruct {
             this->rollFileSize = rth.rollFileSize;
             this->asyncBufferSize  = rth.asyncBufferSize;
             this->outputLevel = rth.outputLevel;
+
+            return *this;
+        }
+
+        LogConfigStruct& operator=(const LogConfigStruct& rth) {
+            if (this == &rth) {
+                return *this;
+            }
+
+            this->loggerName = rth.loggerName;
+            this->rawFormatter = rth.rawFormatter;
+            this->jsonFormatter = rth.jsonFormatter;
+            this->appenders = rth.appenders;
+            this->singleFileName = rth.singleFileName;
+            this->rollFilePath = rth.rollFilePath;
+            this->rollFilePrefix = rth.rollFilePrefix;
+            this->rollFileSubfix = rth.rollFileSubfix;
+            this->inetAddr = rth.inetAddr;
+            this->port = rth.port;
+            this->rollFileSize = rth.rollFileSize;
+            this->asyncBufferSize  = rth.asyncBufferSize;
+            this->outputLevel = rth.outputLevel;
+
+            return *this;
         }
 
     public:

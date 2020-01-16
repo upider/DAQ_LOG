@@ -26,7 +26,8 @@ class LocationInfo {
 
         LocationInfo();
         LocationInfo(const LocationInfo& src);
-        LocationInfo & operator = (const LocationInfo& src);
+        LocationInfo& operator=(const LocationInfo& src);
+        LocationInfo& operator=(const LocationInfo&& src);
 
         void clear();
 
@@ -40,8 +41,6 @@ class LocationInfo {
         int m_lineNumber;
         const char* m_fileName;
         const char* m_methodName;
-
-
 };
 
 }
