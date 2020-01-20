@@ -7,9 +7,15 @@
 #include <string>
 #include <sstream>
 #include <memory>
+#include <sys/syscall.h>
+#include <unistd.h>
+
 #include <boost/fiber/all.hpp>
+
 #include "locationinfo.hpp"
 #include "loglevel.hpp"
+
+#define _GNU_SOURCE
 
 
 namespace daq {
@@ -30,12 +36,9 @@ class LogEvent {
         void setLevel(LogLevel level) {
             m_level = level;
         }
-        //uint32_t getElapse() const {
-        //    return m_elapse;
-        //}
         static uint32_t getThreadId() {
             std::ostringstream oss;
-            oss << getpid();
+            oss << syscall(__NR_gettid);
             uint32_t tid = std::stoull(oss.str());
             return tid;
         }
